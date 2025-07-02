@@ -1,0 +1,41 @@
+[
+  {
+    "id":1,
+    "name": "Site vitrine professionnel",
+    "image":
+      "/images/site-pro-capture-1.png",
+    "linkProject": "https://elodie-gateau.github.io/Elodie-Gateau-Psychologue-du-Travail/",
+    "linkGitHub": "https://github.com/Elodie-Gateau/Elodie-Gateau-Psychologue-du-Travail",
+    "tag": "Développement Web",
+    "description": "Site vitrine professionnel réalisé pour présenter l'activité de psychologue du travail."
+  },
+    {
+    "id":2,
+    "name": "Site professionnel professeur de batterie",
+    "image":
+      "/images/site-jp-capture-1.png",
+    "linkProject": "https://jpgateau-batterie.fr/",
+    "linkGitHub": "https://github.com/Elodie-Gateau/jpgbatterie",
+    "tag": "Développement Web",
+    "description": "Site vitrine professionnel réalisé pour présenter l'activité de Jean-Pierre Gateau professeur de batterie."
+  },
+    {
+    "id":3,
+    "name": "Site professionnel Valeurs & Compétences",
+    "image":
+      "/images/site-valeurs-capture-1.png",
+    "linkProject": "https://valeursetcompetences.com/",
+    "tag": "Wordpress",
+    "description": "Site professionnel réalisé pour l'activité de la société Valeurs & Compétences."
+  },
+    {
+    "id":4,
+    "name": "Application professionnelle Valeurs & Compétences",
+    "image":
+      "/images/appli-valeurs-capture-1.png"
+    ,
+    "linkProject": "https://valeursetcompetences.softr.app/sign-in",
+    "tag": "Application",
+    "description": "Application professionnelle à destination des employés de Valeurs & Compétences pour la gestion de leurs dossiers administratifs"
+  }
+]

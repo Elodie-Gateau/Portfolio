@@ -1,0 +1,44 @@
+[
+  {
+    "poste": "Psychologue du Travail",
+    "periode": "2017 - aujourd'hui",
+    "entreprise": "Valeurs & Compétences",
+    "realisations": [
+      "Création d'une application portail client (Airtable, Make, Softr, Tally)",
+      "Création du site internet de l'entreprise (WordPress)",
+      "Mise en place des CRM Sellsy et Axonaut"
+    ]
+  },
+  {
+    "poste": "Psychologue du Travail Indépendante",
+    "periode": "2021 - 2023",
+    "realisations": [
+      "Création du site internet vitrine (HTML, CSS)"
+    ]
+  },
+  {
+    "poste": "Enseignante vacataire",
+    "periode": "2016 - 2018",
+    "entreprise": "Université d'Angers",
+    "realisations": [
+      "Chargée de TD en Psychologie Sociale",
+      "Création d'un cours sur la psychologie et les nouvelles technologies"
+    ]
+  },
+  {
+    "poste": "Chargée de développement RH",
+    "periode": "2013 - 2016",
+    "entreprise": "DMVP Formation",
+    "realisations": [
+      "Participation au développement d'une application Salesforce pour la gestion du recrutement",
+      "Gestion et animation d'une équipe de 3 collaborateurs"
+    ]
+  },
+  {
+    "poste": "Stages RH et Psychologie du Travail",
+    "periode": "2009 - 2013",
+    "realisations": [
+      "Consultante RH, Conseillère emploi et orientation (Galiléa, Dom Sortais, Retravailler Ouest, G2A Consultants)"
+    ]
+  }
+]
