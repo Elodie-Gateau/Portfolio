@@ -15,6 +15,7 @@ let selectedSkillCategory = ref("");
 
 const skillsFilter = reactive([]);
 function showAll(skills) {
+    skillsFilter.length = 0;
     for (let skill of skills) {
         skillsFilter.push(skill);
     }

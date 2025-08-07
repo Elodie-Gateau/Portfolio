@@ -123,10 +123,10 @@ function categoriesStyle(projectTag) {
         </div>
         <div class="container-card">
             <div class="card" v-for="project in filterProjects" :key="project.id">
-                <!-- <div class="card-item" > -->
+
                 <h3 @click="showProject(project.id)">{{ project.name }}</h3>
                 <p :style="categoriesStyle(project.tag)">{{ project.tag }}</p>
-                <!-- </div> -->
+
                 <ProjectCard :image="project.image" :tag="project.tag" :description="project.description"
                     :linkProject="project.linkProject" :linkGitHub="project.linkGitHub"
                     :isVisible="selectedProject === project.id">

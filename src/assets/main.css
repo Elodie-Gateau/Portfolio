@@ -198,6 +198,11 @@ img {
     max-width: 300px;
   }
 
+
+  img.expand {
+    max-width: none;
+  }
+
   .home {
     padding: 5rem;
   }
@@ -377,24 +382,35 @@ h3 {
   padding: 1rem;
 }
 
+.projets .container-card {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+
+}
+
 .projets .card {
   background-color: var(--color-background-mute);
-  margin: 1rem 0;
-  width: 20rem;
+
+  min-width: 100%;
   min-height: 10rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
   gap: 1rem;
   box-shadow: 2px 2px 5px var(--vt-c-black-mute);
-  cursor: pointer;
+
 }
 
 .projets .card h3 {
   text-align: center;
   font-size: 1rem;
   padding: 0;
-
+  cursor: pointer;
 }
 
 
@@ -430,8 +446,19 @@ h3 {
   width: 90%;
 }
 
+.projets .card-details img.expand {
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 @media (min-width: 768px) {
-  .container-card {
+  .projets .container-card {
 
     display: flex;
     flex-direction: row;
@@ -443,14 +470,25 @@ h3 {
 
   .projets .card {
 
-    min-width: 15rem;
+    min-width: 25%;
     max-width: 25%;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
     box-shadow: 2px 2px 5px var(--vt-c-black-mute);
-    cursor: pointer;
+
+  }
+
+  .projets .card-details img.expand {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+
+    z-index: 9999;
   }
 }
 
@@ -472,7 +510,7 @@ h3 {
 }
 
 .filter {
-  max-width: 30%;
+  max-width: 80%;
 }
 
 .filter button {
@@ -489,9 +527,9 @@ h3 {
 
 .badges {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+
+  align-items: center;
   gap: 2rem;
   width: 100%;
   padding: 2rem;
@@ -499,7 +537,7 @@ h3 {
 }
 
 .badge {
-  width: 20%;
+  width: 100%;
   background-color: var(--vt-c-white-soft);
   border-radius: 10px;
   padding: 1rem;
@@ -511,7 +549,7 @@ h3 {
 
 
 .badge img {
-  width: 100%;
+  width: 50%;
   height: auto;
   max-width: 150px;
   object-fit: contain;
@@ -533,6 +571,28 @@ h3 {
   text-align: left;
   padding-bottom: 10px;
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+
+  .badges {
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+  }
+
+  .badge {
+    width: 20%;
+
+  }
+
+  .filter {
+    max-width: 30%;
+  }
+
 }
 
 .progress-container {
@@ -572,4 +632,32 @@ h3 {
     padding: 0;
     font-weight: normal;
   }
+}
+
+/* Contact */
+
+.ContactForm h3 {
+  text-align: center;
+  font-size: 1.2rem;
+
+}
+
+.ContactForm p {
+  text-align: center;
+  font-size: 1rem;
+
+}
+
+.ContactForm .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 2rem;
+
+}
+
+.socials a {
+  color: var(--vt-c-orange);
+  cursor: pointer;
 }

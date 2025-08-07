@@ -163,9 +163,9 @@
     "name": "Symfony",
     "badge": "/images/badges/logo-Symfony.png",
     "category": "Développement",
-    "progress": 0,
+    "progress": 50,
     "source": "Formation TP Développeur web",
-    "exemple": "à venir prochainement dans la formation"
+    "exemple": "Création d'un mini-twitter dans le cadre d'un travail de groupe"
   },
   {
     "name": "Notion",

@@ -22,7 +22,7 @@ watch(email, (newValue, oldValue) => {
 <template>
     <section class="ContactForm">
         <h2>Contactez-moi</h2>
-        <form action="" @submit.prevent="confirmMessage = true">
+        <!-- <form action="" @submit.prevent="confirmMessage = true">
 
             <label for="name">Votre nom</label>
             <input id="name" type="text" placeholder="Nom">
@@ -39,10 +39,14 @@ watch(email, (newValue, oldValue) => {
 
             <button type="submit" :disabled="!isEmailValid">Envoyer</button>
             <p v-show="confirmMessage">Votre message est bien envoyé, merci !</p>
-        </form>
+        </form> -->
+        <h3>Numéro de téléphone :</h3>
+        <p>06 62 75 05 35</p>
+        <h3>Adresse email :</h3>
+        <p>elodie.gateau.raffeneau@gmail.com</p>
 
+        <h3>Retrouvez-moi sur :</h3>
         <div class="socials">
-            <p>Retrouvez-moi sur :</p>
             <a href="https://github.com/Elodie-Gateau"><font-awesome-icon :icon="['fab', 'github']" /></a>
             <a href="https://www.linkedin.com/in/elodiegateau/"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
 
