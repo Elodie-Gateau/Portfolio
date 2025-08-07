@@ -2,6 +2,10 @@
 import skills from '@/assets/skills.json' with { type: 'json' };
 import { ref, reactive, computed } from 'vue';
 
+function getImageUrl(path) {
+    return new URL(`../assets${path}`, import.meta.url).href;
+}
+
 const skillsCategories = computed(() => {
     const categoriesList = [];
     for (let skill of skills) {
@@ -14,24 +18,24 @@ const skillsCategories = computed(() => {
 let selectedSkillCategory = ref("");
 
 const skillsFilter = reactive([]);
+
 function showAll(skills) {
     skillsFilter.length = 0;
     for (let skill of skills) {
-        skillsFilter.push(skill);
+        skillsFilter.push({ ...skill, imgPath: getImageUrl(skill.badge) });
     }
 }
 showAll(skills);
+
 function showBadges(cat) {
     skillsFilter.length = 0;
     selectedSkillCategory.value = cat;
     for (let skill of skills) {
         if (selectedSkillCategory.value === skill.category) {
-            skillsFilter.push(skill);
+            skillsFilter.push({ ...skill, imgPath: getImageUrl(skill.badge) });
         }
     }
 }
-
-const imgPath = new URL(`../assets${skill.badge}`, import.meta.url).href
 
 </script>
 
