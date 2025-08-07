@@ -30,6 +30,9 @@ function showBadges(cat) {
         }
     }
 }
+
+const imgPath = new URL(`../assets${skill.badge}`, import.meta.url).href
+
 </script>
 
 <template>
@@ -46,7 +49,7 @@ function showBadges(cat) {
         <div class="badges">
             <div class="badge" v-for="skill in skillsFilter" :key="skill.name">
                 <!-- <div class="badge-item"> -->
-                <img :src="skill.badge" :alt="skill.name">
+                <img :src="skill.imgPath" :alt="skill.name">
                 <h3>{{ skill.name }}</h3>
                 <div class="progress-container">
                     <div class="progress-bar" :style="{ width: skill.progress + '%' }"></div>

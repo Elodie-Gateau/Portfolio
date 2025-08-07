@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({ image: String, tag: String, description: String, linkProject: String, linkGitHub: String, isVisible: Boolean })
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 // const imageStyle = reactive({});
 const isOpen = ref(false);
 function toggleImage() {
@@ -8,13 +8,14 @@ function toggleImage() {
 
 }
 
+const imgPath = computed(() => new URL(`../assets${props.image}`, import.meta.url).href);
 
 </script>
 
 <template>
     <div class="card-details" v-show="isVisible">
 
-        <img :src="image" @click="toggleImage" :class="{ expand: isOpen }">
+        <img :src="imgPath" @click="toggleImage" :class="{ expand: isOpen }">
 
         <p class="description">{{ description }}</p>
         <div class="linkProjects"><a :href="linkProject"><button class="link-project">Lien du projet</button></a>
