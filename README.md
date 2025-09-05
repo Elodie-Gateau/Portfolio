@@ -80,34 +80,12 @@ src/
 
 ---
 
-## ⚙️ Installation et exécution
-
-1. **Cloner** le projet :  
-   ```bash
-   git clone https://github.com/Elodie-Gateau/tp-portfolio.git
-   cd tp-portfolio
-   ```
-
-2. **Installer les dépendances** :  
-   ```bash
-   npm install
-   ```
-
-3. **Lancer le serveur de développement** :  
-   ```bash
-   npm run dev
-   ```
-
-4. Ouvrir [http://localhost:5173](http://localhost:5173) dans un navigateur.
-
-
----
 
 ## 👩‍💻 Auteur
 
 **Elodie Gateau**  
 - 📧 elodie.gateau.raffeneau@gmail.com  
-- 🌐 [Portfolio en ligne](https://elodie-gateau.github.io)  
+- 🌐 [Portfolio en ligne](https://elodie-gateau.github.io/Portfolio/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/elodiegateau/)  
 - 🐙 [GitHub](https://github.com/Elodie-Gateau)
 
