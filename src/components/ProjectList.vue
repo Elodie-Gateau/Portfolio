@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard.vue';
 import { ref, computed, onMounted, reactive } from 'vue';
 import Multiselect from 'vue-multiselect'
 
+const base = import.meta.env.BASE_URL;
 
 const projectsJson = reactive(projects);
 
@@ -127,7 +128,7 @@ function categoriesStyle(projectTag) {
                 <h3 @click="showProject(project.id)">{{ project.name }}</h3>
                 <p :style="categoriesStyle(project.tag)">{{ project.tag }}</p>
 
-                <ProjectCard :image="project.image" :tag="project.tag" :description="project.description"
+                <ProjectCard :image="base + project.image" :tag="project.tag" :description="project.description"
                     :linkProject="project.linkProject" :linkGitHub="project.linkGitHub"
                     :isVisible="selectedProject === project.id">
                 </ProjectCard>

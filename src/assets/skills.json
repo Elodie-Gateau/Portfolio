@@ -1,178 +1,371 @@
 [
   {
     "name": "HTML5",
-    "badge": "/images/badges/logo-html5.png",
-    "category": "Développement",
-    "progress": 70,
-    "source": "Formation TP Développeur web",
-    "exemple": "Structure de pages sémantiques, normes BEM"
+    "badge": "images/badges/logo-html5.png",
+    "category": "Front-end",
+    "progress": 75,
+    "source": "Formation TP Développeur web et autoformation en ligne",
+    "projects": [
+      {
+        "name": "Jean-Pierre Gateau",
+        "image": "images/site-jp-capture-1.png",
+        "link": "https://jpgateau-batterie.fr/",
+        "description": "Création du site vitrine d'un professeur de batterie"
+      },
+      {
+        "name": "Elodie Raffeneau Psychologue du Travail",
+        "image": "images/site-pro-capture-1.png",
+        "link": "",
+        "description": "Création du site vitrine d'une activité de psychologue indépendante."
+      },
+      {
+        "name": "Patachou",
+        "image": "images/patachou.png",
+        "link": "https://github.com/Elodie-Gateau/Patachou",
+        "description": "Réalisation de l'HTML en normes BEM pour l'intégration SASS"
+      }
+    ]
   },
   {
     "name": "CSS3",
-    "badge": "/images/badges/logo-css3.png",
-    "category": "Développement",
-    "progress": 60,
-    "source": "Formation TP Développeur web",
-    "exemple": "Mise en page responsive d'un portfolio, exercices d'animations"
+    "badge": "images/badges/logo-css3.png",
+    "category": "Front-end",
+    "progress": 70,
+    "source": "Formation TP Développeur web et autoformation en ligne",
+    "projects": [
+      {
+        "name": "Challenge-burger",
+        "image": "dist/images/Challenge-menu-burger.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Challenge-burger",
+        "description": "Toggle burger animé, media queries et SASS"
+      },
+      {
+        "name": "Patachou",
+        "image": "images/patachou.png",
+        "link": "https://github.com/Elodie-Gateau/Patachou",
+        "description": "Intégration SASS d'un site vitrine"
+      },
+      {
+        "name": "Testimonials-grid",
+        "image": "images/Testimonials-grid-section.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Testimonials-grid",
+        "description": "Mise en page responsive en CSS Grid"
+      }
+    ]
   },
   {
     "name": "JavaScript",
-    "badge": "/images/badges/logo-JavaScript.png",
-    "category": "Développement",
-    "progress": 50,
+    "badge": "images/badges/logo-JavaScript.png",
+    "category": "Front-end",
+    "progress": 55,
     "source": "Formation TP Développeur web",
-    "exemple": "Formulaire interactif avec validation"
+    "projects": [
+      {
+        "name": "Marimba",
+        "image": "images/Marimba.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Marimba",
+        "description": "Exercices JS dans le cadre de la formation"
+      },
+      {
+        "name": "Thor",
+        "image": "images/JeuThor.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Thor",
+        "description": "Petit jeu programmé en JavaScript"
+      }
+    ]
   },
   {
     "name": "Vue.js",
-    "badge": "/images/badges/logo-VueJs.png",
-    "category": "Développement",
-    "progress": 40,
-    "source": "Formation TP Développeur web",
-    "exemple": "Réalisation du portfolio dynamique"
-  },
-  {
-    "name": "Git",
-    "badge": "/images/badges/logo-git.png",
-    "category": "Outils",
-    "progress": 60,
-    "source": "Formation TP Développeur web",
-    "exemple": "Suivi des versions de projets sur GitHub"
-  },
-  {
-    "name": "GitHub",
-    "badge": "/images/badges/logo-github.png",
-    "category": "Outils",
-    "progress": 70,
-    "source": "Formation TP Développeur web",
-    "exemple": "Dépôts publics et gestion de branches"
-  },
-  {
-    "name": "WordPress",
-    "badge": "/images/badges/logo-Wordpress.png",
-    "category": "Développement",
-    "progress": 80,
-    "source": "Valeurs & Compétences",
-    "exemple": "Création du site vitrine de Valeurs & Compétences"
-  },
-  {
-    "name": "Photoshop",
-    "badge": "/images/badges/logo-Photoshop.png",
-    "category": "Design",
-    "progress": 60,
-    "source": "Formation Arinfo 2019",
-    "exemple": "Colorisation de photos anciennes"
-  },
-  {
-    "name": "Illustrator",
-    "badge": "/images/badges/logo-Illustrator.png",
-    "category": "Design",
-    "progress": 40,
-    "source": "Formation Arinfo 2019",
-    "exemple": "Création de logos"
-  },
-  {
-    "name": "InDesign",
-    "badge": "/images/badges/logo-inDesign.png",
-    "category": "Design",
-    "progress": 40,
-    "source": "Formation Arinfo 2019",
-    "exemple": "Mise en page de brochures"
-  },
-  {
-    "name": "Figma",
-    "badge": "/images/badges/logo-figma.png",
-    "category": "Design",
+    "badge": "images/badges/logo-VueJs.png",
+    "category": "Front-end",
     "progress": 50,
     "source": "Formation TP Développeur web",
-    "exemple": "Maquettes UI pour application web"
-  },
-  {
-    "name": "VSCode",
-    "badge": "/images/badges/logo-VSCode.png",
-    "category": "Outils",
-    "progress": 80,
-    "source": "Formation TP Développeur web",
-    "exemple": "Environnement de développement principal"
-  },
-  {
-    "name": "Salesforce",
-    "badge": "/images/badges/logo-Salesforce.png",
-    "category": "CRM",
-    "progress": 60,
-    "source": "DMVP Formations",
-    "exemple": "Suivi de clients dans une PME"
-  },
-  {
-    "name": "Sellsy",
-    "badge": "/images/badges/logo-Sellsy.png",
-    "category": "CRM",
-    "progress": 70,
-    "source": "Valeurs & Compétences",
-    "exemple": "Gestion de devis et factures et suivi clients"
-  },
-  {
-    "name": "Axonaut",
-    "badge": "/images/badges/logo-Axonaut.png",
-    "category": "CRM",
-    "progress": 70,
-    "source": "Valeurs & Compétences",
-    "exemple": "Suivi commercial et automatisations administratives"
-  },
-  {
-    "name": "Airtable",
-    "badge": "/images/badges/logo-Airtable.png",
-    "category": "No-Code",
-    "progress": 80,
-    "source": "Formation No-Code",
-    "exemple": "Base de données collaborative pour Valeurs & Compétences"
-  },
-  {
-    "name": "Softr",
-    "badge": "/images/badges/logo-Softr.png",
-    "category": "No-Code",
-    "progress": 80,
-    "source": "Formation No-Code",
-    "exemple": "Création d'un portail collaborateurs connecté à Airtable pour Valeurs & Compétences"
-  },
-  {
-    "name": "Make",
-    "badge": "/images/badges/logo-Make.png",
-    "category": "No-Code",
-    "progress": 60,
-    "source": "Formation No-Code",
-    "exemple": "Automatisations pour générer des documents administratifs pour Valeurs & Compétences"
+    "projects": [
+      {
+        "name": "Portfolio",
+        "image": "images/portfolio.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Portfolio",
+        "description": "Portfolio dynamique réalisé en Vue.js"
+      }
+    ]
   },
   {
     "name": "PHP",
-    "badge": "/images/badges/logo-PHP.png",
-    "category": "Développement",
-    "progress": 30,
+    "badge": "images/badges/logo-PHP.png",
+    "category": "Back-end & Data",
+    "progress": 45,
     "source": "Formation TP Développeur web",
-    "exemple": "Création d'un site de recettes dans le cadre d'un exercice"
+    "projects": [
+      {
+        "name": "Boutique-en-ligne",
+        "image": "images/DevGarden.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Boutique-en-ligne",
+        "description": "Projet e-commerce en PHP en équipe"
+      },
+      {
+        "name": "Delices-Maison-Exercice-PHP",
+        "image": "images/delices-maison.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Delices-Maison-Exercice-PHP",
+        "description": "Site de recettes en PHP"
+      },
+      {
+        "name": "Repertoire-de-films-Exercice-PHP",
+        "image": "images/gestion-films.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Repertoire-de-films-Exercice-PHP",
+        "description": "Répertoire de films (PHP + MySQL)"
+      }
+    ]
   },
   {
     "name": "mySQL",
-    "badge": "/images/badges/logo-mySQL.png",
-    "category": "Développement",
-    "progress": 30,
+    "badge": "images/badges/logo-mySQL.png",
+    "category": "Back-end & Data",
+    "progress": 45,
     "source": "Formation TP Développeur web",
-    "exemple": "Création et requêtes sur base de données dans le cadre d'exercices"
+    "projects": [
+      {
+        "name": "Repertoire-de-films-Exercice-PHP",
+        "image": "images/gestion-films.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Repertoire-de-films-Exercice-PHP",
+        "description": "CRUD et requêtes SQL sur base de films"
+      }
+    ]
   },
   {
     "name": "Symfony",
-    "badge": "/images/badges/logo-Symfony.png",
-    "category": "Développement",
+    "badge": "images/badges/logo-Symfony.png",
+    "category": "Back-end & Data",
     "progress": 50,
     "source": "Formation TP Développeur web",
-    "exemple": "Création d'un mini-twitter dans le cadre d'un travail de groupe"
+    "projects": [
+      {
+        "name": "Mini-Twitter-Symfony",
+        "image": "images/Tweet.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Mini-Twitter-Symfony",
+        "description": "Mini Twitter en Symfony, gestion des likes en AJAX"
+      },
+      {
+        "name": "Symfony-CRUD-relations",
+        "image": "images/Workshop.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Symfony-CRUD-relations",
+        "description": "CRUD avec relations OneToMany / ManyToMany"
+      },
+      {
+        "name": "Snif-and-Go",
+        "image": "images/snif-and-go.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
+        "description": "Projet de fin d'études réalisé avec Symfony. Application communautaire : création de compte, inscription de son chien et participation à des balades sur des itinéraires partagés."
+      }
+    ]
+  },
+  {
+    "name": "Git",
+    "badge": "images/badges/logo-git.png",
+    "category": "Outils de dev",
+    "progress": 70,
+    "source": "Formation TP Développeur web",
+    "projects": [
+      {
+        "name": "Mini-Twitter-Symfony",
+        "image": "images/Tweet.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Mini-Twitter-Symfony",
+        "description": "Travail de groupe avec commits par fonctionnalités et méthode AGILE"
+      },
+      {
+        "name": "Boutique-en-ligne",
+        "image": "images/DevGarden.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Boutique-en-ligne",
+        "description": "Suivi des commits sur un projet PHP"
+      }
+    ]
+  },
+  {
+    "name": "GitHub",
+    "badge": "images/badges/logo-github.png",
+    "category": "Outils de dev",
+    "progress": 75,
+    "source": "Formation TP Développeur web",
+    "projects": [
+      {
+        "name": "Portfolio",
+        "image": "images/portfolio.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Portfolio",
+        "description": "Utilisation de GitHub Pages pour publier le site"
+      }
+    ]
+  },
+  {
+    "name": "VSCode",
+    "badge": "images/badges/logo-VSCode.png",
+    "category": "Outils de dev",
+    "progress": 85,
+    "source": "Formation TP Développeur web",
+    "projects": []
+  },
+  {
+    "name": "WordPress",
+    "badge": "images/badges/logo-Wordpress.png",
+    "category": "CMS & No-Code Web",
+    "progress": 75,
+    "source": "Valeurs & Compétences",
+    "projects": [
+      {
+        "name": "Valeurs & Compétences site internet",
+        "image": "images/site-valeurs-capture-2.png",
+        "link": "https://valeursetcompetences.com/",
+        "description": "Utilisation de Thrive Architect pour co-construire le site vitrine de l'entreprise."
+      }
+    ]
   },
   {
     "name": "Notion",
-    "badge": "/images/badges/logo-Notion.png",
-    "category": "No-Code",
-    "progress": 60,
+    "badge": "images/badges/logo-Notion.png",
+    "category": "CMS & No-Code Web",
+    "progress": 70,
     "source": "Formation No-Code et usage personnel",
-    "exemple": "Système de gestion de contenu personnel"
+    "projects": []
+  },
+  {
+    "name": "Airtable",
+    "badge": "images/badges/logo-Airtable.png",
+    "category": "CMS & No-Code Web",
+    "progress": 80,
+    "source": "Formation No-Code",
+    "projects": [
+      {
+        "name": "Application professionnelle Valeurs & Compétences",
+        "image": "images/appli-valeurs-capture-1.png",
+        "link": "https://espaceclientvaleursetcompetences.softr.app/login",
+        "description": "Base de données utilisée pour l'application métier de l'entreprise et portail client"
+      }
+    ]
+  },
+  {
+    "name": "Softr",
+    "badge": "images/badges/logo-Softr.png",
+    "category": "CMS & No-Code Web",
+    "progress": 80,
+    "source": "Formation No-Code",
+    "projects": [
+      {
+        "name": "Application professionnelle Valeurs & Compétences",
+        "image": "images/appli-valeurs-capture-1.png",
+        "link": "https://espaceclientvaleursetcompetences.softr.app/login",
+        "description": "Création de l'interface de l'application métier et portail client"
+      }
+    ]
+  },
+  {
+    "name": "Make",
+    "badge": "images/badges/logo-Make.png",
+    "category": "CMS & No-Code Web",
+    "progress": 65,
+    "source": "Formation No-Code",
+    "projects": [
+      {
+        "name": "Application professionnelle Valeurs & Compétences",
+        "image": "images/appli-valeurs-capture-1.png",
+        "link": "https://espaceclientvaleursetcompetences.softr.app/login",
+        "description": "Automatisations et génération de documents"
+      }
+    ]
+  },
+  {
+    "name": "Figma",
+    "badge": "images/badges/logo-figma.png",
+    "category": "Design & UI",
+    "progress": 50,
+    "source": "Formation TP Développeur web",
+    "projects": [
+      {
+        "name": "Snif-and-Go",
+        "image": "images/snif-and-go.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
+        "description": "Maquettes et wireframe du projet de fin d'étude réalisées avec Figma."
+      }
+    ]
+  },
+  {
+    "name": "Photoshop",
+    "badge": "images/badges/logo-Photoshop.png",
+    "category": "Design & UI",
+    "progress": 60,
+    "source": "Formation Arinfo 2019 et usage personnel",
+    "projects": [
+      {
+        "name": "Snif-and-Go",
+        "image": "images/snif-and-go.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
+        "description": "Valorisation des photos du projet de fin d'études avec Photoshop."
+      }
+    ]
+  },
+  {
+    "name": "Illustrator",
+    "badge": "images/badges/logo-Illustrator.png",
+    "category": "Design & UI",
+    "progress": 45,
+    "source": "Formation Arinfo 2019 et usage personnel",
+    "projects": [
+      {
+        "name": "Snif-and-Go",
+        "image": "images/snif-and-go.jpeg",
+        "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
+        "description": "Création du logo du projet de fin d'études avec Photoshop."
+      }
+    ]
+  },
+  {
+    "name": "InDesign",
+    "badge": "images/badges/logo-inDesign.png",
+    "category": "Design & UI",
+    "progress": 45,
+    "source": "Formation Arinfo 2019 et usage personnel",
+    "projects": []
+  },
+  {
+    "name": "Salesforce",
+    "badge": "images/badges/logo-Salesforce.png",
+    "category": "CRM & Gestion",
+    "progress": 60,
+    "source": "DMVP Formations",
+    "projects": [
+      {
+        "name": "Application recrutement",
+        "image": "images/badges/logo-Salesforce.png",
+        "link": "",
+        "description": "Collaboration au développement d'une fonctionnalité de recrutement au CRM de l'entreprise."
+      }
+    ]
+  },
+  {
+    "name": "Sellsy",
+    "badge": "images/badges/logo-Sellsy.png",
+    "category": "CRM & Gestion",
+    "progress": 70,
+    "source": "Valeurs & Compétences",
+    "projects": [
+      {
+        "name": "CRM Valeurs & Compétences",
+        "image": "images/badges/logo-Sellsy.png",
+        "link": "",
+        "description": "Mise en place, import de données et paramétrages du CRM de l'entreprise."
+      }
+    ]
+  },
+  {
+    "name": "Axonaut",
+    "badge": "images/badges/logo-Axonaut.png",
+    "category": "CRM & Gestion",
+    "progress": 70,
+    "source": "Valeurs & Compétences",
+    "projects": [
+      {
+        "name": "CRM Valeurs & Compétences",
+        "image": "images/badges/logo-Axonaut.png",
+        "link": "",
+        "description": "Mise en place, import de données et paramétrages du CRM de l'entreprise."
+      }
+    ]
   }
 ]

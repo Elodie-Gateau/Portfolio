@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import Home from './Home.vue';
 import AboutSection from './AboutSection.vue';
-import ProjectList from './ProjectList.vue';
+// import ProjectList from './ProjectList.vue';
 import SkillBadge from './SkillBadge.vue';
 import ContactForm from './ContactForm.vue';
 
@@ -37,7 +37,7 @@ function clickNav(component) {
                 <ul>
                     <li @click="clickNav(Home)">Accueil</li>
                     <li @click="clickNav(AboutSection)">À propos</li>
-                    <li @click="clickNav(ProjectList)">Projets</li>
+                    <!-- <li @click="clickNav(ProjectList)">Projets</li> -->
                     <li @click="clickNav(SkillBadge)">Compétences</li>
                     <li @click="clickNav(ContactForm)">Contact</li>
                 </ul>
