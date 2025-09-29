@@ -35,7 +35,7 @@
     "projects": [
       {
         "name": "Challenge-burger",
-        "image": "images/challenge-menu-burger.jpeg",
+        "image": "images/burger.jpeg",
         "link": "https://github.com/Elodie-Gateau/Challenge-burger",
         "description": "Toggle burger animé, media queries et SASS"
       },
@@ -60,6 +60,12 @@
     "progress": 55,
     "source": "Formation TP Développeur web",
     "projects": [
+      {
+        "name": "Custom Widget Grist Kanban",
+        "image": "",
+        "link": "https://github.com/Elodie-Gateau/Grist-Custom-Widget-Kanban",
+        "description": "Développement d'un widget pour un outil No Code dans le cadre d'un stage"
+      },
       {
         "name": "Marimba",
         "image": "images/Marimba.jpeg",
