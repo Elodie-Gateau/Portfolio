@@ -62,7 +62,7 @@
     "projects": [
       {
         "name": "Custom Widget Grist Kanban",
-        "image": "",
+        "image": "images/custom-widget.png",
         "link": "https://github.com/Elodie-Gateau/Grist-Custom-Widget-Kanban",
         "description": "Développement d'un widget pour un outil No Code dans le cadre d'un stage"
       },
