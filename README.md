@@ -7,26 +7,22 @@ Ce projet est un **portfolio dynamique développé en Vue.js**, permettant de pr
 - mes formations,  
 - mes projets (sites web, applications, dépôts GitHub),  
 - mes compétences techniques (badges interactifs),  
-- un formulaire de contact avec validation.  
+- des informations de contact  
 
 ---
 
 ## 🚀 Fonctionnalités principales
 
 - **Navigation dynamique** avec affichage conditionnel des composants Vue (Home, À propos, Projets, Compétences, Contact).  
-- **Présentation des projets** :  
-  - Import des projets depuis un fichier JSON,  
-  - Récupération dynamique des dépôts GitHub via l’API GitHub,  
-  - Filtrage par catégories (HTML, CSS, Vue.js, No-Code, etc.),  
-  - Détails projet avec image, description, lien vers le site et GitHub.  
-- **Compétences** affichées sous forme de badges :  
+- **Compétences et Présentation des projets** affichées sous forme de badges :  
   - Filtrage par catégories (Développement, Outils, Design, CRM, No-Code),  
   - Barre de progression par compétence,  
-  - Source d’apprentissage et exemples d’utilisation.  
+  - Source d’apprentissage et exemples d’utilisation,
+  - Import des projets depuis un fichier JSON,
+  - Détails projet avec image, description, lien vers le site et GitHub.  
 - **À propos** : affichage des expériences professionnelles et formations via des fichiers JSON.  
 - **Contact** :  
   - Affichage des coordonnées,  
-  - Validation d’adresse e-mail via Regex,  
   - Liens vers GitHub et LinkedIn.  
 
 ---
@@ -48,7 +44,6 @@ Ce projet est un **portfolio dynamique développé en Vue.js**, permettant de pr
 src/
 │
 ├── assets/               # Données JSON + images du portfolio
-│   ├── projects.json
 │   ├── skills.json
 │   ├── experiences.json
 │   ├── formations.json
@@ -57,8 +52,6 @@ src/
 │   ├── Navigation.vue
 │   ├── Home.vue
 │   ├── AboutSection.vue
-│   ├── ProjectList.vue
-│   ├── ProjectCard.vue
 │   ├── SkillBadge.vue
 │   ├── ContactForm.vue
 │
