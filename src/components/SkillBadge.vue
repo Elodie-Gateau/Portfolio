@@ -75,9 +75,6 @@ function toggleProjects(i) {
                 <img :src="base + skill.badge" :alt="skill.name">
 
                 <h3>{{ skill.name }}</h3>
-                <div class="progress-container">
-                    <div class="progress-bar" :style="{ width: skill.progress + '%' }"></div>
-                </div>
                 <h4>Source :</h4>
                 <p>{{ skill.source }}</p>
                 <h4 v-if="skill.projects && skill.projects.length" @click="toggleProjects(skill.name)">

@@ -3,7 +3,6 @@
     "name": "HTML5",
     "badge": "images/badges/logo-html5.png",
     "category": "Front-end",
-    "progress": 75,
     "source": "Formation TP Développeur web et autoformation en ligne",
     "projects": [
       {
@@ -30,7 +29,6 @@
     "name": "CSS3",
     "badge": "images/badges/logo-css3.png",
     "category": "Front-end",
-    "progress": 70,
     "source": "Formation TP Développeur web et autoformation en ligne",
     "projects": [
       {
@@ -57,7 +55,6 @@
     "name": "JavaScript",
     "badge": "images/badges/logo-JavaScript.png",
     "category": "Front-end",
-    "progress": 55,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -84,7 +81,6 @@
     "name": "Vue.js",
     "badge": "images/badges/logo-VueJs.png",
     "category": "Front-end",
-    "progress": 50,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -99,7 +95,6 @@
     "name": "PHP",
     "badge": "images/badges/logo-PHP.png",
     "category": "Back-end & Data",
-    "progress": 45,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -126,7 +121,6 @@
     "name": "mySQL",
     "badge": "images/badges/logo-mySQL.png",
     "category": "Back-end & Data",
-    "progress": 45,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -141,7 +135,6 @@
     "name": "Symfony",
     "badge": "images/badges/logo-Symfony.png",
     "category": "Back-end & Data",
-    "progress": 50,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -168,7 +161,6 @@
     "name": "Git",
     "badge": "images/badges/logo-git.png",
     "category": "Outils de dev",
-    "progress": 70,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -189,7 +181,6 @@
     "name": "GitHub",
     "badge": "images/badges/logo-github.png",
     "category": "Outils de dev",
-    "progress": 75,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -204,7 +195,6 @@
     "name": "VSCode",
     "badge": "images/badges/logo-VSCode.png",
     "category": "Outils de dev",
-    "progress": 85,
     "source": "Formation TP Développeur web",
     "projects": []
   },
@@ -212,7 +202,6 @@
     "name": "WordPress",
     "badge": "images/badges/logo-Wordpress.png",
     "category": "CMS & No-Code Web",
-    "progress": 75,
     "source": "Valeurs & Compétences",
     "projects": [
       {
@@ -227,7 +216,6 @@
     "name": "Notion",
     "badge": "images/badges/logo-Notion.png",
     "category": "CMS & No-Code Web",
-    "progress": 70,
     "source": "Formation No-Code et usage personnel",
     "projects": []
   },
@@ -235,7 +223,6 @@
     "name": "Airtable",
     "badge": "images/badges/logo-Airtable.png",
     "category": "CMS & No-Code Web",
-    "progress": 80,
     "source": "Formation No-Code",
     "projects": [
       {
@@ -250,7 +237,6 @@
     "name": "Softr",
     "badge": "images/badges/logo-Softr.png",
     "category": "CMS & No-Code Web",
-    "progress": 80,
     "source": "Formation No-Code",
     "projects": [
       {
@@ -265,7 +251,6 @@
     "name": "Make",
     "badge": "images/badges/logo-Make.png",
     "category": "CMS & No-Code Web",
-    "progress": 65,
     "source": "Formation No-Code",
     "projects": [
       {
@@ -280,7 +265,6 @@
     "name": "Figma",
     "badge": "images/badges/logo-figma.png",
     "category": "Design & UI",
-    "progress": 50,
     "source": "Formation TP Développeur web",
     "projects": [
       {
@@ -295,7 +279,6 @@
     "name": "Photoshop",
     "badge": "images/badges/logo-Photoshop.png",
     "category": "Design & UI",
-    "progress": 60,
     "source": "Formation Arinfo 2019 et usage personnel",
     "projects": [
       {
@@ -310,7 +293,6 @@
     "name": "Illustrator",
     "badge": "images/badges/logo-Illustrator.png",
     "category": "Design & UI",
-    "progress": 45,
     "source": "Formation Arinfo 2019 et usage personnel",
     "projects": [
       {
@@ -325,7 +307,6 @@
     "name": "InDesign",
     "badge": "images/badges/logo-inDesign.png",
     "category": "Design & UI",
-    "progress": 45,
     "source": "Formation Arinfo 2019 et usage personnel",
     "projects": []
   },
@@ -333,7 +314,6 @@
     "name": "Salesforce",
     "badge": "images/badges/logo-Salesforce.png",
     "category": "CRM & Gestion",
-    "progress": 60,
     "source": "DMVP Formations",
     "projects": [
       {
@@ -348,7 +328,6 @@
     "name": "Sellsy",
     "badge": "images/badges/logo-Sellsy.png",
     "category": "CRM & Gestion",
-    "progress": 70,
     "source": "Valeurs & Compétences",
     "projects": [
       {
@@ -363,7 +342,6 @@
     "name": "Axonaut",
     "badge": "images/badges/logo-Axonaut.png",
     "category": "CRM & Gestion",
-    "progress": 70,
     "source": "Valeurs & Compétences",
     "projects": [
       {

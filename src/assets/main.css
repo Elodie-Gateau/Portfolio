@@ -643,24 +643,6 @@ h3 {
 
 }
 
-.progress-container {
-  width: 150px;
-  max-width: 100%;
-  background-color: #eee;
-  border-radius: 15px;
-  border: 1px solid lightgrey;
-  height: 20px;
-  overflow: hidden;
-  margin: 1rem;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #4caf50;
-  border-radius: 15px 0 0 15px;
-  transition: width 0.5s ease-in-out;
-}
-
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
