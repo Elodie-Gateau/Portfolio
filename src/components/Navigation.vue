@@ -1,14 +1,36 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import Home from './Home.vue';
 import AboutSection from './AboutSection.vue';
 import SkillBadge from './SkillBadge.vue';
 import ContactForm from './ContactForm.vue';
 
+// Constante pour le breakpoint (synchronisé avec CSS)
+const BREAKPOINT_TABLET = 768;
+
 const menuOpen = ref(false);
-if (window.innerWidth < 720) {
-    menuOpen.value = true;
+
+// Initialisation du menu selon la taille d'écran
+function initMenuState() {
+    menuOpen.value = window.innerWidth < BREAKPOINT_TABLET;
 }
+
+// Gestion du resize
+function handleResize() {
+    const isMobile = window.innerWidth < BREAKPOINT_TABLET;
+    menuOpen.value = isMobile;
+}
+
+// Lifecycle hooks
+onMounted(() => {
+    initMenuState();
+    window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize);
+});
+
 const emit = defineEmits(['nav']);
 
 function toggleMenu() {
@@ -17,7 +39,7 @@ function toggleMenu() {
 
 function clickNav(component) {
     emit('nav', component);
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < BREAKPOINT_TABLET) {
         toggleMenu();
     }
 }
