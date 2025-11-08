@@ -8,27 +8,6 @@ import formations from '@/assets/formations.json' with { type: 'json' };
     <section class="about">
         <h2>À propos de moi</h2>
 
-        <p>Psychologue du travail de formation, <span class="yellow-span">passionnée</span> de solutions numériques et
-            en reconversion dans
-            le
-            développement web et web mobile, je souhaite allier aujourd'hui mes compétences humaines et techniques pour
-            concevoir des solutions digitales orientées <span class="orange-span">utilisateurs.</span></p>
-
-        <p>Ma passion pour les outils numériques fut un véritable fil conducteur dans toutes mes expériences.
-            Mon parcours m'a permis de réaliser des projets de digitalisation variés : <span
-                class="yellow-span">création de sites
-                vitrines</span>,
-            développement d'<span class="blue-span">application No Code</span>, <span class="blue-span">déploiement de
-                CRM</span>, gestion de projets
-            collaboratifs et
-            accompagnement au changement. Aujourd'hui, je développe mes compétences techniques en suivant le
-            Titre Professionnel Développeur Web et Web Mobile <span class="yellow-span">(TP DWWM)</span>, avec une
-            appétence particulière
-            pour la
-            conception d'<span class="blue-span">interfaces utilisateurs</span> et le développement d'<span
-                class="orange-span">applications web</span>
-            dynamiques sécurisées.
-        </p>
         <div class="cv">
             <div class="cv-experiences">
                 <h3>Expériences professionnelles</h3>

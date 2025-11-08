@@ -1,32 +1,37 @@
 [
   {
     "annee": "2025",
-    "intitule": "Titre professionnel Développeur Web et Web Mobile (en cours)",
+    "intitule": "Titre professionnel Développeur Web et Web Mobile",
+    "organism": "Arinfo"
+  },
+  {
+    "annee": "2025",
+    "intitule": "TOSA Wordpress",
     "organism": "Arinfo"
   },
   {
     "annee": "2024",
     "intitule": "Numériser et optimiser un processus métier avec des outils no-code",
-        "organism": "Contournement"
+    "organism": "Contournement"
   },
   {
     "annee": "2019",
     "intitule": "Photoshop, Illustrator, InDesign",
-        "organism": "Arinfo"
+    "organism": "Arinfo"
   },
   {
     "annee": "2013",
     "intitule": "Master 2 Psychologie Sociale et du Travail",
-        "organism": "UCO Angers"
+    "organism": "UCO Angers"
   },
   {
     "annee": "2010",
     "intitule": "Licence Psychologie",
-        "organism": "UCO Angers"
+    "organism": "UCO Angers"
   },
   {
     "annee": "2007",
     "intitule": "Baccalauréat Scientifique",
-        "organism": "Lycée Sainte Marie Chantonnay"
+    "organism": "Lycée Sainte Marie Chantonnay"
   }
 ]

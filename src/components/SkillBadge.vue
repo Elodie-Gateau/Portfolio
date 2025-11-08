@@ -52,6 +52,13 @@ const openProjectIndex = ref(null);
 
 function toggleProjects(i) {
     openProjectIndex.value = (openProjectIndex.value === i ? null : i);
+
+    // Bloquer/débloquer le scroll de la page
+    if (openProjectIndex.value !== null) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
 }
 
 
@@ -84,6 +91,7 @@ function toggleProjects(i) {
                     hidden: openProjectIndex !== skill.name,
                     'lightbox-open': openIndex !== null
                 }">
+                    <button class="close-button" @click="toggleProjects(skill.name)">✕</button>
                     <div class="projets" v-for="(project, i) in skill.projects" :key="project.name" :class="{
                         'is-active': openIndex === i,
                         'is-hidden': openIndex !== null && openIndex !== i

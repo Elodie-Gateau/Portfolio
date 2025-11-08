@@ -1,7 +1,17 @@
 [
   {
+    "poste": "Développeuse web stagiaire",
+    "periode": "Septembre - Octobre 2025",
+    "entreprise": "Dycazo by Fastcube",
+    "realisations": [
+      "Développement d'un custom widget Kanban pour l'outil No Code Grist",
+      "Création du widget en Javascript",
+      "Publication via GitHub Pages"
+    ]
+  },
+  {
     "poste": "Psychologue du Travail",
-    "periode": "2017 - aujourd'hui",
+    "periode": "2017 - 2025",
     "entreprise": "Valeurs & Compétences",
     "realisations": [
       "Création d'une application portail client (Airtable, Make, Softr, Tally)",

@@ -19,12 +19,11 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-
-  --vt-c-dark-blue: #023047;
-  --vt-c-sky-blue: #8ecae6;
-  --vt-c-blue: #219ebc;
-  --vt-c-yellow: #ffb703;
-  --vt-c-orange: #fb8500;
+  --vt-c-dark-blue: #1e293b;
+  --vt-c-sky-blue: #67e8f9;
+  --vt-c-blue: #06b6d4;
+  --vt-c-yellow: #fde047;
+  --vt-c-orange: #f59e0b;
 }
 
 /* semantic color variables for this project */
@@ -65,7 +64,6 @@
 }
 
 body {
-  min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background-mute);
   transition:
