@@ -20,7 +20,7 @@ section {
 }
 
 main {
-  font-size: 0.85rem;
+  font-size: 0.65rem;
 }
 
 @media (min-width: 768px) {
@@ -168,13 +168,15 @@ main {
   background-color: var(--vt-c-white);
   padding: clamp(1rem, 4vw, 5rem);
   border-radius: 10px;
+  justify-content: space-evenly;
 }
 
 h1 {
   font-weight: 800;
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 0 2rem;
+  font-size: 1.1rem;
+  text-align: right;
+  padding-left: 3rem;
+
 }
 
 h1 span {
@@ -183,7 +185,7 @@ h1 span {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: var(--vt-c-blue);
   font-weight: 600;
   padding-left: 5rem;
@@ -209,6 +211,8 @@ h5 {
   gap: 1rem;
 }
 
+
+
 .title-photo {
   display: flex;
   align-items: center;
@@ -216,6 +220,7 @@ h5 {
   justify-content: space-between;
   padding: 1rem;
   width: 100%;
+
 
 }
 
@@ -242,8 +247,26 @@ h5 {
 
 .home p span {
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: var(--vt-c-orange);
+}
+
+@media (min-width: 375px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  main {
+    font-size: 0.85rem;
+  }
+
+  .home p span {
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 768px) {
