@@ -6,12 +6,6 @@
     "source": "Formation TP Développeur web et autoformation en ligne",
     "projects": [
       {
-        "name": "Jean-Pierre Gateau",
-        "image": "images/site-jp-capture-1.png",
-        "link": "https://jpgateau-batterie.fr/",
-        "description": "Création du site vitrine d'un professeur de batterie"
-      },
-      {
         "name": "Elodie Raffeneau Psychologue du Travail",
         "image": "images/site-pro-capture-1.png",
         "link": "",
@@ -128,6 +122,12 @@
         "image": "images/gestion-films.jpeg",
         "link": "https://github.com/Elodie-Gateau/Repertoire-de-films-Exercice-PHP",
         "description": "CRUD et requêtes SQL sur base de films"
+      },
+      {
+        "name": "espace-des-marques.com",
+        "image": "images/EspaceDesMarquesHome.png",
+        "link": "https://www.espace-des-marques.com/fr/",
+        "description": "Maintenance du site et développement de fonctionnalités en travail collaboratif sous la responsabilité d'un lead développeur"
       }
     ]
   },
@@ -154,6 +154,12 @@
         "image": "images/snif-and-go.jpeg",
         "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
         "description": "Projet de fin d'études réalisé avec Symfony. Application communautaire : création de compte, inscription de son chien et participation à des balades sur des itinéraires partagés."
+      },
+      {
+        "name": "espace-des-marques.com",
+        "image": "images/EspaceDesMarquesHome.png",
+        "link": "https://www.espace-des-marques.com/fr/",
+        "description": "Maintenance du site et développement de fonctionnalités en travail collaboratif sous la responsabilité d'un lead développeur"
       }
     ]
   },
@@ -174,7 +180,13 @@
         "image": "images/DevGarden.jpeg",
         "link": "https://github.com/Elodie-Gateau/Boutique-en-ligne",
         "description": "Suivi des commits sur un projet PHP"
-      }
+      },
+        {
+          "name": "espace-des-marques.com",
+          "image": "images/EspaceDesMarquesHome.png",
+          "link": "https://www.espace-des-marques.com/fr/",
+          "description": "Maintenance du site et développement de fonctionnalités en travail collaboratif sous la responsabilité d'un lead développeur"
+        }
     ]
   },
   {
@@ -349,6 +361,38 @@
         "image": "images/badges/logo-Axonaut.png",
         "link": "",
         "description": "Mise en place, import de données et paramétrages du CRM de l'entreprise."
+      }
+    ]
+  },
+  {
+    "name": "Java",
+    "badge": "images/badges/logo-Java.svg",
+    "category": "Back-end & Data",
+    "source": "ENI (en cours de formation)"
+  },
+  {
+    "name": "Spring Boot",
+    "badge": "images/badges/logo-Spring.svg",
+    "category": "Back-end & Data",
+    "source": "ENI (en cours de formation)"
+  },
+  {
+    "name": "SQL Server",
+    "badge": "images/badges/logo-SQLServer.svg",
+    "category": "Back-end & Data",
+    "source": "ENI (en cours de formation)"
+  },
+  {
+    "name": "GitLab",
+    "badge": "images/badges/logo-GitLab.svg",
+    "category": "Outils de dev",
+    "source": "Espace des Marques",
+    "projects": [
+      {
+        "name": "espace-des-marques.com",
+        "image": "images/EspaceDesMarquesHome.png",
+        "link": "https://www.espace-des-marques.com/fr/",
+        "description": "Maintenance du site et développement de fonctionnalités en travail collaboratif sous la responsabilité d'un lead développeur"
       }
     ]
   }

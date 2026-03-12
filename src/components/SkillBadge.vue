@@ -4,62 +4,71 @@ import { ref, reactive, computed } from 'vue';
 
 const base = import.meta.env.BASE_URL;
 
+const categoryOrder = [
+  'Back-end & Data',
+  'Front-end',
+  'Outils de dev',
+  'Design & UI',
+  'CMS & No-Code Web',
+  'CRM & Gestion',
+];
+
 const skillsCategories = computed(() => {
-    const categoriesList = [];
-    for (let skill of skills) {
-        if (!categoriesList.includes(skill.category)) {
-            categoriesList.push(skill.category);
-        }
-    }
-    return categoriesList;
+  return categoryOrder.filter(cat =>
+      skills.some(skill => skill.category === cat)
+  );
 })
 let selectedSkillCategory = ref("");
 
 const skillsFilter = reactive([]);
 
 function showAll(skills) {
-    skillsFilter.length = 0;
-    for (let skill of skills) {
-        skillsFilter.push(skill);
-    }
+  skillsFilter.length = 0;
+  const sorted = [...skills].sort((a, b) =>
+      categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category)
+  );
+  for (let skill of sorted) {
+    skillsFilter.push(skill);
+  }
 }
 showAll(skills);
 
 function showBadges(cat) {
-    skillsFilter.length = 0;
-    selectedSkillCategory.value = cat;
-    for (let skill of skills) {
-        if (selectedSkillCategory.value === skill.category) {
-            skillsFilter.push(skill);
-        }
+  skillsFilter.length = 0;
+  selectedSkillCategory.value = cat;
+  for (let skill of skills) {
+    if (selectedSkillCategory.value === skill.category) {
+      skillsFilter.push(skill);
     }
+  }
 }
 
 
 const openIndex = ref(null);
 function toggleImage(i) {
-    if (openIndex.value === i) {
-        openIndex.value = null;
+  if (openIndex.value === i) {
+    openIndex.value = null;
 
-    } else {
-        openIndex.value = i;
+  } else {
+    openIndex.value = i;
 
-    }
+  }
 }
 
 
 const openProjectIndex = ref(null);
 
 function toggleProjects(i) {
-    openProjectIndex.value = (openProjectIndex.value === i ? null : i);
+  openProjectIndex.value = (openProjectIndex.value === i ? null : i);
 
-    // Bloquer/débloquer le scroll de la page
-    if (openProjectIndex.value !== null) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
-    }
+  // Bloquer/débloquer le scroll de la page
+  if (openProjectIndex.value !== null) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 }
+
 
 
 </script>
