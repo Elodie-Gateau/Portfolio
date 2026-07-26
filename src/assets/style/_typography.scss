@@ -1,0 +1,135 @@
+@use "variables" as *;
+
+$font-family-base: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../font/plus-jakarta-sans-v12-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../font/plus-jakarta-sans-v12-latin-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../font/plus-jakarta-sans-v12-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../font/plus-jakarta-sans-v12-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../font/plus-jakarta-sans-v12-latin-800.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Label en majuscules
+@mixin text-kicker {
+  font-family: $font-family-base;
+  font-size: $size-12;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $color-accent;
+}
+
+// Titre principal
+@mixin text-h1 {
+  font-family: $font-family-base;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+  line-height: 1.03;
+  font-size: clamp(2.125rem, 7.4cqi, 4.125rem);
+  color: $color-text;
+}
+
+// Titre de section
+@mixin text-h2 {
+  font-family: $font-family-base;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  font-size: clamp(1.625rem, 4.4cqi, 2.625rem);
+  color: $color-text;
+}
+
+// Titre de carte / sous-section (h3)
+@mixin text-h3 {
+  font-family: $font-family-base;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  font-size: $size-18;
+  color: $color-text;
+}
+
+// Paragraphe principal
+@mixin text-body-lg {
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: clamp(0.9375rem, 1.7cqi, 1.125rem);
+  color: $color-text-muted;
+}
+
+// Paragraphe standard
+@mixin text-body {
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: $size-14;
+  color: $color-text-muted;
+}
+
+// Petit texte
+@mixin text-caption {
+  font-family: $font-family-base;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: $size-12;
+  color: $color-text-muted;
+}
+
+// Petit label en majuscules
+@mixin text-label {
+  font-family: $font-family-base;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: $size-10;
+  color: $color-text-soft;
+}
+
+// Liens de navigation
+@mixin text-nav-link {
+  font-family: $font-family-base;
+  font-weight: 600;
+  font-size: $size-14;
+  color: $color-text;
+}
+
+// Boutons / CTA
+@mixin text-button {
+  font-family: $font-family-base;
+  font-weight: 700;
+  font-size: $size-14;
+}

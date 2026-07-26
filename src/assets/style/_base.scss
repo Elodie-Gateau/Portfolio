@@ -1,0 +1,35 @@
+@use "variables" as *;
+@use "typography" as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  @include text-body-lg;
+}
+
+#app {
+  max-width: 1280px;
+}
+
+main {
+  font-size: 0.65rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

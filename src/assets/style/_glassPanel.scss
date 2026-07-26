@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+@mixin glass-default($radius: 22px, $padding: $size-16, $margin-bottom: $size-24) {
+  border-radius: $radius;
+  padding: $padding;
+  margin-bottom: $margin-bottom;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(26px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 22px 60px -30px rgba(40, 46, 80, 0.5),
+  inset 0 1px 0 rgba(255, 255, 255, 0.85),
+  inset 0 0 0 0.5px rgba(255, 255, 255, 0.3);
+}
+
+@mixin glass-soft($radius: 22px, $padding: $size-16, $margin-bottom: $size-24) {
+  border-radius: $radius;
+  padding: $padding;
+  margin-bottom: $margin-bottom;
+  background: rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(15px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+@mixin glass-dark($radius: 22px, $padding: $size-16, $margin-bottom: $size-24) {
+  border-radius: $radius;
+  padding: $padding;
+  margin-bottom: $margin-bottom;
+  background: rgba(26, 29, 42, 0.55);
+  backdrop-filter: blur(30px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 26px 64px -30px rgba(12, 16, 40, 0.7),
+  inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  color: #eef0f8;
+}
+
+.glass-panel {
+  &.glass--default {
+    @include glass-default;
+  }
+
+  &.glass--soft {
+    @include glass-soft;
+  }
+
+  &.glass--dark {
+    @include glass-dark;
+  }
+}
