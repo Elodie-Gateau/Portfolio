@@ -98,7 +98,7 @@ section {
 
   button {
     @include button-secondary();
-    @include glass-soft($size-12, $size-8 $size-12, $size-10);
+    @include glass-soft($size-12, $size-8 $size-12, $size-32);
     align-self: center;
   }
 }
