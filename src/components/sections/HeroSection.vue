@@ -7,14 +7,16 @@ import {ArrowDownToLine} from "@lucide/vue";
     <div class="container">
       <div class="flash">
         <span></span>
-        <p>En alternance, disponible très bientôt</p>
+        <p>Disponible prochainement</p>
       </div>
       <h1>Je conçois des apps web qui <span>simplifient le quotidien professionnel.</span></h1>
       <p>Développeuse fullstack, j'aime construire des solutions qui rendent <strong>service</strong> aux professionnels et améliorent leur quotidien.</p>
       <a href="#">Voir mes projets</a>
       <button>Télécharger le CV <ArrowDownToLine /></button>
     </div>
-    <img src="/public/images/photo-profil.webp" alt="Portrait Elodie Gateau">
+    <div class="img-container">
+      <img src="/public/images/photo-profil.webp" alt="Portrait Elodie Gateau">
+    </div>
   </section>
 </template>
 
@@ -89,8 +91,14 @@ import {ArrowDownToLine} from "@lucide/vue";
 
   }
 
+  .img-container {
+    @include glass-default($radius-xl);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   img {
     width: 100%;
-    @include glass-default($radius-xl);
+    border-radius: $radius-lg;
   }
 </style>
