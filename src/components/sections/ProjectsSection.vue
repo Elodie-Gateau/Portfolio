@@ -17,7 +17,7 @@ function seeMore() {
 </script>
 
 <template>
-  <section>
+  <section id="projects">
     <h2>Projets réalisés</h2>
     <h3>Quelques réalisations</h3>
     <div v-for="project in projects" :key="project.position" class="project">

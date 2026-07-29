@@ -22,6 +22,9 @@ import Nav from "@/components/ui/Nav.vue";
 
 header {
   display: flex;
+  position: sticky;
+  top: $size-16;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   @include glass-default($radius-lg);

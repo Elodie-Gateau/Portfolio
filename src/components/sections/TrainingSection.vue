@@ -3,7 +3,7 @@ import formations from '@/assets/data/formations.json' with { type: 'json'};
 </script>
 
 <template>
-<section>
+<section id="training">
   <h2>Formations</h2>
   <h3>Apprendre, en continu</h3>
   <div class="grid">
@@ -38,11 +38,11 @@ section {
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: $size-14;
+    gap: $size-8;
   }
 
   .formation {
-    @include glass-soft($radius-md, $size-16 $size-20, $size-8);
+    @include glass-default($radius-md, $size-16 $size-20, $size-8);
     display: flex;
     gap: $size-14;
     align-items: flex-start;
@@ -59,7 +59,7 @@ section {
     }
 
     h4 {
-      @include text-h3();
+      @include text-nav-link();
       margin: 0 0 $size-4;
     }
 

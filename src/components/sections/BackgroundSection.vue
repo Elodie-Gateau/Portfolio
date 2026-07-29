@@ -3,7 +3,7 @@ import experiences from '@/assets/data/experiences.json' with { type: 'json'};
 </script>
 
 <template>
-<section>
+<section id="background">
   <h2>Parcours Professionnel</h2>
   <h3>Écouter, comprendre, coder</h3>
   <div class="timeline">

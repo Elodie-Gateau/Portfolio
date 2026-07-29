@@ -1,5 +1,10 @@
 <script setup>
-import {ArrowDownToLine} from "@lucide/vue";
+import DownloadCV from "@/components/ui/DownloadCV.vue";
+import { useSmoothScroll } from "@/composables/useSmoothScroll";
+
+const { onAnchorClick } = useSmoothScroll({
+  offset: () => document.querySelector('header')?.getBoundingClientRect().bottom ?? 0,
+});
 </script>
 
 <template>
@@ -11,8 +16,8 @@ import {ArrowDownToLine} from "@lucide/vue";
       </div>
       <h1>Je conçois des apps web qui <span>simplifient le quotidien professionnel.</span></h1>
       <p>Développeuse fullstack, j'aime construire des solutions qui rendent <strong>service</strong> aux professionnels et améliorent leur quotidien.</p>
-      <a href="#">Voir mes projets</a>
-      <button>Télécharger le CV <ArrowDownToLine /></button>
+      <a href="#projects" @click="onAnchorClick">Voir mes projets</a>
+      <DownloadCV />
     </div>
     <div class="img-container">
       <img src="/public/images/photo-profil.webp" alt="Portrait Elodie Gateau">

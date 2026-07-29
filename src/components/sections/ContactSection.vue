@@ -8,7 +8,7 @@ const links = [
 </script>
 
 <template>
-  <section>
+  <section id="contact">
     <div class="main">
       <h2>Contact</h2>
       <h3>Travaillons ensemble.</h3>

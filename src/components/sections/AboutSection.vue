@@ -1,9 +1,14 @@
 <script setup>
 import { ArrowRight } from '@lucide/vue';
+import { useSmoothScroll } from "@/composables/useSmoothScroll";
+
+const { onAnchorClick } = useSmoothScroll({
+  offset: () => document.querySelector('header')?.getBoundingClientRect().bottom ?? 0,
+});
 </script>
 
 <template>
-<section>
+<section id="about">
   <div class="container">
     <h2>À propos</h2>
     <h3>Analyser les problèmes, et conçevoir des solutions.</h3>
@@ -31,7 +36,7 @@ import { ArrowRight } from '@lucide/vue';
       <p>FR, EN B1</p>
     </div>
     <hr>
-    <button>Me contacter <ArrowRight /></button>
+    <button><a href="#contact" @click="onAnchorClick">Me contacter <ArrowRight /></a></button>
   </div>
 </section>
 </template>

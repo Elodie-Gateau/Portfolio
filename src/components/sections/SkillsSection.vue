@@ -17,7 +17,7 @@ const categories = computed(() =>
 </script>
 
 <template>
-<section>
+<section id="skills">
   <h2>Compétences</h2>
   <h3>Une stack complète, des outils pertinents</h3>
   <div v-for="group in categories" :key="group.category" class="skill">

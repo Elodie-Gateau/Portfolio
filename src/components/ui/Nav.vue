@@ -1,9 +1,20 @@
 <script setup>
-import { Menu, CircleX, ArrowDownToLine } from '@lucide/vue';
+import { Menu, CircleX } from '@lucide/vue';
 import { ref } from "vue";
+import DownloadCV from "@/components/ui/DownloadCV.vue";
+import { useSmoothScroll } from "@/composables/useSmoothScroll";
 
 const isOpen = ref(false);
 const toggle = () => isOpen.value = !isOpen.value;
+
+const { onAnchorClick } = useSmoothScroll({
+  offset: () => document.querySelector('header')?.getBoundingClientRect().bottom ?? 0,
+});
+
+function onNavLinkClick(event) {
+  onAnchorClick(event);
+  isOpen.value = false;
+}
 </script>
 
 <template>
@@ -15,13 +26,13 @@ const toggle = () => isOpen.value = !isOpen.value;
     <nav v-if="isOpen">
       <CircleX @click="toggle()" />
       <ul>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Compétences</a></li>
-        <li><a href="#">Projets</a></li>
-        <li><a href="#">Parcours</a></li>
-        <li><a href="#">Formations</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="btn-primary"><a href="#">Télécharger le CV <ArrowDownToLine /></a></li>
+        <li><a href="#about" @click="onNavLinkClick">À propos</a></li>
+        <li><a href="#skills" @click="onNavLinkClick">Compétences</a></li>
+        <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
+        <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
+        <li><a href="#training" @click="onNavLinkClick">Formations</a></li>
+        <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
+        <li class="btn-primary"><DownloadCV /></li>
       </ul>
     </nav>
   </Teleport>
@@ -36,6 +47,7 @@ const toggle = () => isOpen.value = !isOpen.value;
 .mobile-menu {
   @include glass-soft($radius-md, $size-16, 0);
   display: flex;
+  z-index: 1999;
 
   svg {
     display: block;
@@ -76,7 +88,7 @@ nav {
     .btn-primary {
       @include button-primary();
 
-      a {
+      button {
         display: flex;
         justify-content: center;
         align-items: center;
