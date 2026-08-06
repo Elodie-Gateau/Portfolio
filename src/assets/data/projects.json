@@ -4,7 +4,7 @@
     "name": "The Funky Lagos Orchestra",
     "subtitle": "Site vitrine · Groupe de musique",
     "image": "images/Funky-Lagos.webp",
-    "link": "https://www.thefunkylagosorchestra.com/",
+    "link": "https://github.com/Elodie-Gateau/The-Funky-Lagos-Orchestra",
     "description": "Site vitrine bilingue pour groupe de musique et espace administratif de gestion de contenu.",
     "tags": ["Symfony", "Vue.js", "Git", "Github"]
   },
@@ -24,7 +24,7 @@
     "image": "images/snif-and-go.jpeg",
     "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
     "description": "Projet de fin d'études : application communautaire de balades canines réalisée avec Symfony.",
-    "tags": ["Symfony", "Figma", "Photoshop", "Illustrator"]
+    "tags": ["Symfony", "Figma"]
   },
   {
     "position": 4,

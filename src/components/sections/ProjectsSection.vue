@@ -28,7 +28,7 @@ function seeMore() {
       <div>
         <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
       </div>
-      <a v-if="project.link" :href="project.link">Voir le code</a>
+      <a v-if="project.link" :href="project.link" target="_blank">Voir le code</a>
     </div>
     <button v-if="hasMore" @click="seeMore()">Voir plus</button>
   </section>

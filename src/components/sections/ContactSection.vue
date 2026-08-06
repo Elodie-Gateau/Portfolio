@@ -1,5 +1,6 @@
 <script setup>
-import { ArrowDownToLine } from '@lucide/vue';
+import { ArrowUpRight, ArrowDownToLine } from '@lucide/vue';
+import DownloadCV from "@/components/ui/DownloadCV.vue";
 
 const links = [
   { label: 'GitHub', href: 'https://github.com/Elodie-Gateau' },
@@ -18,9 +19,7 @@ const links = [
       </div>
     </div>
     <div class="side">
-      <a class="cv" href="/public/upload/CV_ElodieGateau.pdf" download="Elodie-Gateau-CV.pdf">
-        Télécharger mon CV <ArrowDownToLine />
-      </a>
+      <div class="btn-primary"><DownloadCV /></div>
       <a
         v-for="link in links"
         :key="link.label"
@@ -29,7 +28,7 @@ const links = [
         rel="noopener"
         class="link"
       >
-        <span>{{ link.label }}</span><span class="arrow">↗</span>
+        {{ link.label }}<ArrowUpRight />
       </a>
     </div>
   </section>
@@ -92,19 +91,18 @@ section {
     @include glass-default($radius-xl, $size-20);
     display: flex;
     flex-direction: column;
-    gap: $size-10;
 
-    .cv {
+    .btn-primary {
       @include button-primary();
-      justify-content: center;
     }
 
     .link {
       @include button-link-glass();
-      @include glass-soft($radius-md, $size-14 $size-16);
+      @include glass-soft($radius-md, $size-14 $size-16, $size-16);
 
-      .arrow {
+      svg {
         color: $color-accent;
+        width: $size-18;
       }
     }
 

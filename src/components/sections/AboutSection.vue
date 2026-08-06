@@ -36,7 +36,7 @@ const { onAnchorClick } = useSmoothScroll({
       <p>FR, EN B1</p>
     </div>
     <hr>
-    <button><a href="#contact" @click="onAnchorClick">Me contacter <ArrowRight /></a></button>
+    <a href="#contact" @click="onAnchorClick">Me contacter <ArrowRight /></a>
   </div>
 </section>
 </template>
@@ -82,7 +82,7 @@ h3 {
     margin: 0;
   }
 
-  button {
+  a {
     @include button-ghost-accent();
     margin-top: $size-20;
   }

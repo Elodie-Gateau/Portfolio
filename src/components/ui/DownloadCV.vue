@@ -13,6 +13,7 @@ function downloadCV() {
 </template>
 
 <style scoped lang="scss">
+@use "@/assets/style/variables" as *;
 button {
   border: none;
   background: none;
@@ -21,5 +22,9 @@ button {
   font-size: inherit;
   font-weight: inherit;
   letter-spacing: inherit;
+}
+
+svg {
+  width: $size-20;
 }
 </style>

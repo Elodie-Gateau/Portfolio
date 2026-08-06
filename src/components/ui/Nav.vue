@@ -22,7 +22,7 @@ function onNavLinkClick(event) {
     <Menu v-if="!isOpen" @click="toggle()"/>
   </div>
 
-  <Teleport to="body">
+  <Teleport to="header">
     <nav v-if="isOpen">
       <CircleX @click="toggle()" />
       <ul>
@@ -55,7 +55,7 @@ function onNavLinkClick(event) {
 }
 
 nav {
-  @include glass-soft($radius: $radius-lg);
+  @include glass-default($radius: $radius-lg);
   position: fixed;
   top: 0;
   left: 0;
@@ -64,6 +64,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  background: rgba(255, 255, 255, 0.95);
 
   ul {
     height: 100%;

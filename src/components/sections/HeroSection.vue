@@ -89,8 +89,8 @@ const { onAnchorClick } = useSmoothScroll({
     }
 
     button {
-      @include button-secondary();
       @include glass-soft();
+      @include button-secondary();
       align-self: flex-start;
     }
 
