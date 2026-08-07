@@ -1,5 +1,5 @@
 <script setup>
-import { ArrowUpRight, ArrowDownToLine } from '@lucide/vue';
+import { ArrowUpRight } from '@lucide/vue';
 import DownloadCV from "@/components/ui/DownloadCV.vue";
 
 const links = [
@@ -43,7 +43,7 @@ const links = [
 section {
   display: flex;
   flex-direction: column;
-  gap: $size-16;
+  margin-top: $size-24;
 
   .main {
     @include glass-dark($radius-xl, $size-24);
@@ -94,6 +94,12 @@ section {
 
     .btn-primary {
       @include button-primary();
+      margin-bottom: $size-20;
+
+      button {
+        display: flex;
+        align-items: center;
+      }
     }
 
     .link {

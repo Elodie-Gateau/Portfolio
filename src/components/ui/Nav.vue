@@ -22,7 +22,7 @@ function onNavLinkClick(event) {
     <Menu v-if="!isOpen" @click="toggle()"/>
   </div>
 
-  <Teleport to="header">
+  <Teleport to="body">
     <nav v-if="isOpen">
       <CircleX @click="toggle()" />
       <ul>
@@ -61,10 +61,10 @@ nav {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 2000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background: rgba(255, 255, 255, 0.95);
 
   ul {
     height: 100%;

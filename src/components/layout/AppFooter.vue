@@ -4,8 +4,7 @@ const year = new Date().getFullYear();
 
 <template>
   <footer>
-    <span class="name">Elodie Gateau</span>
-    <span class="meta">© {{ year }} · Conçu avec soin · Vue.js</span>
+    <span class="meta">© {{ year }} Conçu avec passion et Vue.js</span>
   </footer>
 </template>
 
@@ -19,13 +18,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: $size-10;
-
-  .name {
-    @include text-nav-link();
-    font-weight: 700;
-  }
 
   .meta {
     @include text-caption();
