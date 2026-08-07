@@ -23,18 +23,20 @@ function onNavLinkClick(event) {
   </div>
 
   <Teleport to="body">
-    <nav v-if="isOpen">
-      <CircleX @click="toggle()" />
-      <ul>
-        <li><a href="#about" @click="onNavLinkClick">À propos</a></li>
-        <li><a href="#skills" @click="onNavLinkClick">Compétences</a></li>
-        <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
-        <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
-        <li><a href="#training" @click="onNavLinkClick">Formations</a></li>
-        <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
-        <li class="btn-primary"><DownloadCV /></li>
-      </ul>
-    </nav>
+    <Transition name="nav-pop">
+      <nav v-if="isOpen">
+        <CircleX @click="toggle()" />
+        <ul>
+          <li><a href="#about" @click="onNavLinkClick">À propos</a></li>
+          <li><a href="#skills" @click="onNavLinkClick">Compétences</a></li>
+          <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
+          <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
+          <li><a href="#training" @click="onNavLinkClick">Formations</a></li>
+          <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
+          <li class="btn-primary"><DownloadCV /></li>
+        </ul>
+      </nav>
+    </Transition>
   </Teleport>
 </template>
 
@@ -98,5 +100,17 @@ nav {
     }
   }
 
+}
+
+.nav-pop-enter-active,
+.nav-pop-leave-active {
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-pop-enter-from,
+.nav-pop-leave-to {
+  opacity: 0;
+  transform: scale(0.92) translateY(-16px);
 }
 </style>
