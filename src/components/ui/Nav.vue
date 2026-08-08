@@ -3,6 +3,7 @@ import { Menu, CircleX } from '@lucide/vue';
 import { ref } from "vue";
 import DownloadCV from "@/components/ui/DownloadCV.vue";
 import { useSmoothScroll } from "@/composables/useSmoothScroll";
+import CV from "@/components/ui/CV.vue";
 
 const isOpen = ref(false);
 const toggle = () => isOpen.value = !isOpen.value;
@@ -31,23 +32,34 @@ function onNavLinkClick(event) {
           <li><a href="#skills" @click="onNavLinkClick">Compétences</a></li>
           <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
           <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
-          <li><a href="#training" @click="onNavLinkClick">Formations</a></li>
           <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
           <li class="btn-primary"><DownloadCV /></li>
         </ul>
       </nav>
     </Transition>
   </Teleport>
+
+  <nav class="nav-md-lg">
+    <ul>
+      <li><a href="#about" @click="onNavLinkClick">À&nbsp;propos</a></li>
+      <li><a href="#skills" @click="onNavLinkClick">Compétences</a></li>
+      <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
+      <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
+      <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
+      <li class="btn-primary"><CV /></li>
+    </ul>
+  </nav>
 </template>
 
 <style scoped lang="scss">
 @use "@/assets/style/typography" as *;
 @use "@/assets/style/variables" as *;
+@use "@/assets/style/breakpoint" as *;
 @use "@/assets/style/glassPanel" as *;
 @use "@/assets/style/button" as *;
 
 .mobile-menu {
-  @include glass-soft($radius-md, $size-16, 0);
+  @include glass-soft($radius-md, $size-16, 0, $hover: false);
   display: flex;
   z-index: 1999;
 
@@ -57,7 +69,7 @@ function onNavLinkClick(event) {
 }
 
 nav {
-  @include glass-default($radius: $radius-lg);
+  @include glass-default($radius: $radius-lg, $hover: false);
   position: fixed;
   top: 0;
   left: 0;
@@ -77,19 +89,25 @@ nav {
     padding: $size-10;
     @include text-h3;
 
-    li {
+    li:not(.btn-primary) {
       width: 100%;
       text-align: center;
       padding: $size-16;
       border-radius: $size-16;
       transition: background 0.2s;
       &:hover {
-        @include glass-soft;
+        @include glass-soft($size-16, $size-16, 0, $hover: false);
       }
+    }
+
+    li.btn-primary {
+      width: 100%;
+      text-align: center;
     }
 
     .btn-primary {
       @include button-primary();
+
 
       button {
         display: flex;
@@ -101,7 +119,9 @@ nav {
   }
 
 }
-
+.nav-md-lg {
+  display: none;
+}
 .nav-pop-enter-active,
 .nav-pop-leave-active {
   transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
@@ -112,5 +132,53 @@ nav {
 .nav-pop-leave-to {
   opacity: 0;
   transform: scale(0.92) translateY(-16px);
+}
+
+@media(min-width: $md) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-md-lg {
+    display: flex;
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    z-index: auto;
+    padding: 0;
+    margin-bottom: 0;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+
+    ul {
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      width: 100%;
+      font-size: $size-14;
+
+      li:not(.btn-primary) {
+        padding: $size-8;
+        border-radius: 0;
+        transition: none;
+        font-size: $size-14;
+
+        &:hover {
+          @include glass-soft($size-8, $size-8, 0, $hover: false);
+        }
+      }
+    }
+
+    .btn-primary {
+      @include button-primary($size-8, $size-6);
+      margin-left: $size-20;
+    }
+  }
 }
 </style>

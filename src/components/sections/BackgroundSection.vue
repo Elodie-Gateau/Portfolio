@@ -1,5 +1,18 @@
 <script setup>
 import experiences from '@/assets/data/experiences.json' with { type: 'json'};
+import {computed, ref} from "vue";
+
+const nbExperience = ref(3);
+
+const displayedExperiences = computed(() =>
+  experiences.slice(0, nbExperience.value)
+);
+
+const hasMore = computed(() => nbExperience.value < experiences.length);
+
+function seeMore() {
+  nbExperience.value += 3;
+}
 </script>
 
 <template>
@@ -7,7 +20,7 @@ import experiences from '@/assets/data/experiences.json' with { type: 'json'};
   <h2>Parcours Professionnel</h2>
   <h3>Écouter, comprendre, coder</h3>
   <div class="timeline">
-    <div v-for="experience in experiences" :key="experience.periode" class="tl-row">
+    <div v-for="experience in displayedExperiences" :key="experience.periode" class="tl-row">
       <div class="date">{{ experience.periode }}</div>
       <h4>{{ experience.poste }}</h4>
       <div v-if="experience.entreprise" class="org">{{ experience.entreprise }}</div>
@@ -16,6 +29,7 @@ import experiences from '@/assets/data/experiences.json' with { type: 'json'};
       </ul>
     </div>
   </div>
+  <button v-if="hasMore" @click="seeMore()">Voir plus</button>
 </section>
 </template>
 
@@ -23,9 +37,12 @@ import experiences from '@/assets/data/experiences.json' with { type: 'json'};
 @use "@/assets/style/glassPanel" as *;
 @use "@/assets/style/variables" as *;
 @use "@/assets/style/typography" as *;
+@use "@/assets/style/button" as *;
 
 section {
   @include glass-default($radius-xl, $size-24);
+  display: flex;
+  flex-direction: column;
 
   h2 {
     @include text-kicker();
@@ -104,6 +121,14 @@ section {
         }
       }
     }
+  }
+
+  button {
+    @include button-secondary();
+    @include glass-soft($size-12, $size-8 $size-12, $size-32);
+    align-self: center;
+    margin-top: $size-24;
+    cursor: pointer;
   }
 }
 </style>

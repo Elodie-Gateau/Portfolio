@@ -1,5 +1,7 @@
 <script setup>
 import formations from '@/assets/data/formations.json' with { type: 'json'};
+import { GraduationCap } from '@lucide/vue';
+
 </script>
 
 <template>
@@ -8,7 +10,10 @@ import formations from '@/assets/data/formations.json' with { type: 'json'};
   <h3>Apprendre, en continu</h3>
   <div class="grid">
     <div v-for="formation in formations" :key="formation.intitule" class="formation">
-      <div class="year">{{ formation.annee }}</div>
+      <div class="icon-year">
+        <div class="icon"><GraduationCap /></div>
+        <div class="year">{{ formation.annee }}</div>
+      </div>
       <div>
         <h4>{{ formation.intitule }}</h4>
         <div class="organism">{{ formation.organism }}</div>
@@ -22,6 +27,7 @@ import formations from '@/assets/data/formations.json' with { type: 'json'};
 @use "@/assets/style/glassPanel" as *;
 @use "@/assets/style/variables" as *;
 @use "@/assets/style/typography" as *;
+@use "@/assets/style/breakpoint" as *;
 
 section {
   h2 {
@@ -47,6 +53,10 @@ section {
     gap: $size-14;
     align-items: flex-start;
 
+    svg {
+      color: $color-accent-2;
+    }
+
     .year {
       min-width: $size-48;
       font-weight: 800;
@@ -66,6 +76,32 @@ section {
     .organism {
       @include text-caption();
       color: $color-text-soft;
+    }
+  }
+
+  @media (min-width: $md) {
+    .formation {
+      @include glass-default($radius-md, $size-14, $size-8);
+      flex-direction: column;
+
+      .icon-year {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: $size-20;
+
+        .year {
+          width: 75%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+        }
+      }
     }
   }
 }

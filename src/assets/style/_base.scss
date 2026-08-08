@@ -15,14 +15,28 @@ body {
   padding: 0;
   margin: 0;
   @include text-body-lg;
+  background:
+          radial-gradient(circle at 14% 16%, rgba(74, 140, 255, 0.42), transparent 42%),
+          radial-gradient(circle at 86% 12%, rgba(255, 180, 30, 0.4), transparent 40%),
+          radial-gradient(circle at 82% 88%, rgba(255, 107, 61, 0.4), transparent 44%),
+          radial-gradient(circle at 16% 90%, rgba(178, 58, 38, 0.34), transparent 46%),
+          radial-gradient(circle at 58% 48%, rgba(120, 92, 220, 0.22), transparent 52%),
+          linear-gradient(160deg, #eaf0fb 0%, #e6e9f4 55%, #eef0f6 100%);
+  display: flex;
+  justify-content: center;
 }
 
 #app {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1024px;
 }
 
 main {
   font-size: 0.65rem;
+}
+
+section {
+  margin-bottom: $size-32;
 }
 
 li {

@@ -1,6 +1,7 @@
 <script setup>
 import DownloadCV from "@/components/ui/DownloadCV.vue";
 import { useSmoothScroll } from "@/composables/useSmoothScroll";
+import {ArrowRight} from "@lucide/vue";
 
 const { onAnchorClick } = useSmoothScroll({
   offset: () => document.querySelector('header')?.getBoundingClientRect().bottom ?? 0,
@@ -8,19 +9,52 @@ const { onAnchorClick } = useSmoothScroll({
 </script>
 
 <template>
-  <section class="hero">
-    <div class="container">
+  <section class="about">
+    <div class="container-hero">
       <div class="flash">
         <span></span>
         <p>Disponible prochainement</p>
       </div>
       <h1>Je conçois des apps web qui <span>simplifient le quotidien professionnel.</span></h1>
       <p>Développeuse fullstack, j'aime construire des solutions qui rendent <strong>service</strong> aux professionnels et améliorent leur quotidien.</p>
-      <a href="#projects" @click="onAnchorClick">Voir mes projets</a>
-      <DownloadCV />
+      <div class="buttons">
+        <a href="#projects" @click="onAnchorClick">Voir mes projets</a>
+        <DownloadCV />
+      </div>
     </div>
-    <div class="img-container">
-      <img src="/public/images/photo-profil.webp" alt="Portrait Elodie Gateau">
+    <div class="container">
+      <h2>À propos</h2>
+      <h3>Analyser les problèmes, et conçevoir des solutions.</h3>
+      <p>Pendant près de huit ans, j'ai accompagné des personnes et des organisations dans mon premier métier de psychologue du travail : analyser des besoins, conçevoir des dispositifs centrés sur les usages, en faciliter l'adoption. Une expérience qui irrigue aujourd'hui mes projets de développement.</p>
+      <p>Je me forme actuellement en alternance au titre de <strong>Concepteur Développeur d'Applications</strong>. Front-end soigné, back-end structuré, et un soucis de l'éco-conception et de l'accessibilité.</p>
+    </div>
+    <div class="sidebar">
+      <div class="img-container">
+        <img src="/public/images/photo-profil.webp" alt="Portrait Elodie Gateau">
+      </div>
+      <div class="resume">
+        <div>
+          <p>Localisation</p>
+          <p>Vendée (85)</p>
+        </div>
+        <hr>
+        <div>
+          <p>Statut</p>
+          <p>Alternante</p>
+        </div>
+        <hr>
+        <div>
+          <p>Disponible</p>
+          <p>Février 2027</p>
+        </div>
+        <hr>
+        <div>
+          <p>Langues</p>
+          <p>FR, EN(B1)</p>
+        </div>
+        <hr>
+        <a href="#contact" @click="onAnchorClick">Me contacter <ArrowRight /></a>
+      </div>
     </div>
   </section>
 </template>
@@ -30,8 +64,9 @@ const { onAnchorClick } = useSmoothScroll({
 @use "@/assets/style/variables" as *;
 @use "@/assets/style/typography" as *;
 @use "@/assets/style/button" as *;
+@use "@/assets/style/breakpoint" as *;
 
-  .container {
+  .container-hero {
     @include glass-default($radius-xl);
     width: 100%;
     display: flex;
@@ -40,11 +75,12 @@ const { onAnchorClick } = useSmoothScroll({
 
     .flash {
       @include glass-default($radius-lg, $size-10, 0);
-      padding: $size-8 $size-12;
+      padding: $size-8 $size-20;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      gap: $size-10;
+      gap: $size-14;
+      align-self: flex-start;
       span {
         width: $size-12;
         height: $size-12;
@@ -83,17 +119,22 @@ const { onAnchorClick } = useSmoothScroll({
       }
     }
 
-    a {
-      @include button-primary();
-      align-self: flex-start;
-    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $size-16;
 
-    button {
-      @include glass-soft();
-      @include button-secondary();
-      align-self: flex-start;
-    }
+      a {
+        @include button-primary();
+      }
 
+      button {
+        @include glass-soft();
+        @include button-secondary();
+        cursor: pointer;
+      }
+    }
   }
 
   .img-container {
@@ -106,4 +147,86 @@ const { onAnchorClick } = useSmoothScroll({
     width: 100%;
     border-radius: $radius-lg;
   }
+  
+  
+.container {
+  @include glass-default()
+}
+
+h2 {
+  @include text-kicker();
+}
+
+h3 {
+  @include text-h2;
+}
+
+.resume {
+  @include glass-default();
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p:nth-child(1) {
+      @include text-label;
+    }
+    p:nth-child(2) {
+      @include text-nav-link;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $color-text-soft;
+    opacity: 0.3;
+    margin: 0;
+  }
+
+  a {
+    @include button-ghost-accent();
+    margin-top: $size-20;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $md) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    align-items: start;
+    gap: $size-16;
+
+    .container-hero {
+      grid-column: span 8;
+      grid-row: 1;
+    }
+
+    .container {
+      grid-column: span 8;
+      grid-row: 2;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .sidebar {
+      grid-column: span 4;
+      grid-row: 1 / 3;
+      align-self: start;
+      position: sticky;
+      top: calc(var(--header-height, 4rem) + #{$size-32});
+      display: flex;
+      flex-direction: column;
+      gap: $size-16;
+
+      .img-container,
+      .resume {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 </style>

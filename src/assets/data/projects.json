@@ -2,25 +2,25 @@
   {
     "position": 1,
     "name": "The Funky Lagos Orchestra",
-    "subtitle": "Site vitrine · Groupe de musique",
+    "subtitle": "Site vitrine",
     "image": "images/Funky-Lagos.webp",
     "link": "https://github.com/Elodie-Gateau/The-Funky-Lagos-Orchestra",
-    "description": "Site vitrine bilingue pour groupe de musique et espace administratif de gestion de contenu.",
+    "description": "Site vitrine bilingue pour groupe de musique et back-office de gestion de contenu.",
     "tags": ["Symfony", "Vue.js", "Git", "Github"]
   },
   {
     "position": 2,
     "name": "Custom Widget Grist Kanban",
-    "subtitle": "Widget métier · Stage",
+    "subtitle": "Widget métier",
     "image": "images/custom-widget.png",
     "link": "https://github.com/Elodie-Gateau/Grist-Custom-Widget-Kanban",
-    "description": "Développement d'un widget pour un outil No Code dans le cadre d'un stage.",
-    "tags": ["JavaScript"]
+    "description": "Développement en javascript d'un widget pour un outil No Code Grist dans le cadre de mon stage chez Dycazo.",
+    "tags": ["JavaScript", "Grist"]
   },
   {
     "position": 3,
     "name": "Snif-and-Go",
-    "subtitle": "Plateforme communautaire · Projet de fin d'études",
+    "subtitle": "Plateforme communautaire",
     "image": "images/snif-and-go.jpeg",
     "link": "https://github.com/Elodie-Gateau/Snif-and-Go",
     "description": "Projet de fin d'études : application communautaire de balades canines réalisée avec Symfony.",
@@ -29,7 +29,7 @@
   {
     "position": 4,
     "name": "Portfolio",
-    "subtitle": "Site personnel · Vue.js",
+    "subtitle": "Site personnel",
     "image": "images/portfolio.jpeg",
     "link": "https://github.com/Elodie-Gateau/Portfolio",
     "description": "Portfolio dynamique réalisé en Vue.js, publié via GitHub Pages.",
@@ -37,100 +37,100 @@
   },
   {
     "position": 5,
-    "name": "Application professionnelle Valeurs & Compétences",
-    "subtitle": "Application métier · Mission professionnelle",
+    "name": "Application gestion bilans",
+    "subtitle": "Application métier",
     "image": "images/appli-valeurs-capture-1.png",
     "description": "Application métier et portail client : base de données Airtable, interface Softr, automatisations et génération de documents via Make.",
     "tags": ["Airtable", "Softr", "Make"]
   },
   {
     "position": 6,
-    "name": "Symfony-CRUD-relations",
-    "subtitle": "Exercice · CRUD Symfony",
+    "name": "Symfony CRUD",
+    "subtitle": "CRUD Symfony",
     "image": "images/Workshop.jpeg",
     "link": "https://github.com/Elodie-Gateau/Symfony-CRUD-relations",
-    "description": "CRUD avec relations OneToMany / ManyToMany.",
+    "description": "Exercice de formation : CRUD avec relations OneToMany / ManyToMany.",
     "tags": ["Symfony"]
   },
   {
     "position": 7,
-    "name": "Mini-Twitter-Symfony",
-    "subtitle": "Réseau social · Exercice Symfony",
+    "name": "Mini-Twitter Symfony",
+    "subtitle": "Réseau social",
     "image": "images/Tweet.jpeg",
     "link": "https://github.com/Elodie-Gateau/Mini-Twitter-Symfony",
-    "description": "Mini Twitter en Symfony (gestion des likes en AJAX), développé en groupe avec la méthode Agile.",
+    "description": "Exercice de formation : Mini Twitter en Symfony (gestion des likes en AJAX), développé en groupe avec la méthode Agile.",
     "tags": ["Symfony", "Git"]
   },
   {
     "position": 8,
-    "name": "Repertoire-de-films-Exercice-PHP",
-    "subtitle": "Répertoire · Exercice PHP / MySQL",
+    "name": "Repertoire de films",
+    "subtitle": "Exercice PHP / MySQL",
     "image": "images/gestion-films.jpeg",
     "link": "https://github.com/Elodie-Gateau/Repertoire-de-films-Exercice-PHP",
-    "description": "Répertoire de films en PHP avec CRUD et requêtes SQL sur MySQL.",
+    "description": "Exercice de formation : Répertoire de films en PHP avec CRUD et requêtes SQL sur MySQL.",
     "tags": ["PHP", "mySQL"]
   },
   {
     "position": 9,
-    "name": "Delices-Maison-Exercice-PHP",
-    "subtitle": "Site de recettes · Exercice PHP",
+    "name": "Délices Maison",
+    "subtitle": "Site de recettes",
     "image": "images/delices-maison.jpeg",
     "link": "https://github.com/Elodie-Gateau/Delices-Maison-Exercice-PHP",
-    "description": "Site de recettes en PHP.",
+    "description": "Exercice de formation : Site de recettes en PHP.",
     "tags": ["PHP"]
   },
   {
     "position": 10,
-    "name": "Boutique-en-ligne",
-    "subtitle": "E-commerce · Projet de groupe",
+    "name": "Boutique en ligne",
+    "subtitle": "E-commerce",
     "image": "images/DevGarden.jpeg",
     "link": "https://github.com/Elodie-Gateau/Boutique-en-ligne",
-    "description": "Projet e-commerce en PHP réalisé en équipe, avec suivi Git par fonctionnalités.",
+    "description": "Exercice de formation : Projet e-commerce en PHP réalisé en équipe, avec suivi Git par fonctionnalités.",
     "tags": ["PHP", "Git"]
   },
   {
     "position": 11,
     "name": "Thor",
-    "subtitle": "Jeu · JavaScript",
+    "subtitle": "Jeu",
     "image": "images/JeuThor.jpeg",
     "link": "https://github.com/Elodie-Gateau/Thor",
-    "description": "Petit jeu programmé en JavaScript.",
+    "description": "Exercice de formation : Petit jeu programmé en JavaScript.",
     "tags": ["JavaScript"]
   },
   {
     "position": 12,
     "name": "Marimba",
-    "subtitle": "Exercice · JavaScript",
+    "subtitle": "JavaScript",
     "image": "images/Marimba.jpeg",
     "link": "https://github.com/Elodie-Gateau/Marimba",
-    "description": "Exercices JS dans le cadre de la formation.",
+    "description": "Exercice de formation : Reproduire un instrument de musique virtuel.",
     "tags": ["JavaScript"]
   },
   {
     "position": 13,
     "name": "Testimonials-grid",
-    "subtitle": "Exercice · Mise en page CSS Grid",
+    "subtitle": "Mise en page CSS Grid",
     "image": "images/Testimonials-grid-section.jpeg",
     "link": "https://github.com/Elodie-Gateau/Testimonials-grid",
-    "description": "Mise en page responsive en CSS Grid.",
+    "description": "Exercice de formation : Mise en page responsive en CSS Grid.",
     "tags": ["CSS3"]
   },
   {
     "position": 14,
-    "name": "Challenge-burger",
-    "subtitle": "Exercice · Interface animée",
+    "name": "Challenge burger",
+    "subtitle": "Interface animée",
     "image": "images/burger.jpeg",
     "link": "https://github.com/Elodie-Gateau/Challenge-burger",
-    "description": "Toggle burger animé, media queries et SASS.",
+    "description": "Exercice de formation : Toggle burger animé, media queries et SASS.",
     "tags": ["CSS3"]
   },
   {
     "position": 15,
     "name": "Patachou",
-    "subtitle": "Site vitrine · Exercice d'intégration",
+    "subtitle": "Exercice d'intégration",
     "image": "images/patachou.png",
     "link": "https://github.com/Elodie-Gateau/Patachou",
-    "description": "Intégration HTML aux normes BEM et SASS d'un site vitrine.",
+    "description": "Exercice de formation : Intégration HTML aux normes BEM et SASS d'un site vitrine.",
     "tags": ["HTML5", "CSS3"]
   }
 ]

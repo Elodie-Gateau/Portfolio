@@ -17,6 +17,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 14px 30px -12px rgba(91, 99, 230, 0.85);
   transition: filter 0.2s;
+  cursor: pointer;
 
   &:hover {
     filter: brightness(1.06);
@@ -72,6 +73,7 @@
   padding: $size-14 $size-16;
   border-radius: $size-14;
   transition: background 0.2s;
+  cursor: pointer;
 
   &:hover {
     background: rgba(255, 255, 255, 0.6);

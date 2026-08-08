@@ -5,15 +5,13 @@
   { "name": "Vue.js", "category": "Front-end" },
   { "name": "Angular*", "category": "Front-end" },
   { "name": "PHP", "category": "Back-end" },
-  { "name": "mySQL", "category": "Bases de données" },
+  { "name": "MySQL", "category": "Bases de données" },
   { "name": "Symfony", "category": "Back-end" },
   { "name": "Java*", "category": "Back-end" },
   { "name": "Spring Boot*", "category": "Back-end" },
   { "name": "Python*", "category": "Back-end" },
   { "name": "SQL Server", "category": "Bases de données" },
-  { "name": "MongoDB", "category": "Bases de données" },
-  { "name": "Flutter*", "category": "Mobile" },
-  { "name": "Dart*", "category": "Mobile" },
+  { "name": "MongoDB*", "category": "Bases de données" },
   { "name": "Git", "category": "Outils" },
   { "name": "GitHub", "category": "Outils" },
   { "name": "GitLab", "category": "Outils" },
@@ -21,5 +19,7 @@
   { "name": "Airtable", "category": "No-Code et IA" },
   { "name": "Softr", "category": "No-Code et IA" },
   { "name": "Make", "category": "No-Code et IA" },
-  { "name": "Claude", "category": "No-Code et IA" }
+  { "name": "Claude Code", "category": "No-Code et IA" },
+  { "name": "Flutter*", "category": "Mobile" },
+  { "name": "Dart*", "category": "Mobile" }
 ]

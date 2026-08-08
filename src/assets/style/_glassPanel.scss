@@ -1,6 +1,24 @@
 @use "variables" as *;
 
-@mixin glass-default($radius: $size-22, $padding: $size-24, $margin-bottom: $size-24) {
+// Transition + lift partagés par les 3 variantes de glass au survol.
+// $enabled: false permet de désactiver l'effet (ex: nav plein écran, bouton burger).
+@mixin glass-hover-lift($enabled: true) {
+  @if $enabled {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+
+    &:hover {
+      @content;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
+
+@mixin glass-default($radius: $size-22, $padding: $size-24, $margin-bottom: $size-24, $hover: true) {
   border-radius: $radius;
   padding: $padding;
   margin-bottom: $margin-bottom;
@@ -10,9 +28,16 @@
   box-shadow: 0 22px 60px -30px rgba(40, 46, 80, 0.5),
   inset 0 1px 0 rgba(255, 255, 255, 0.85),
   inset 0 0 0 0.5px rgba(255, 255, 255, 0.3);
+
+  @include glass-hover-lift($hover) {
+    border-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 32px 70px -24px rgba(40, 46, 80, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.4);
+  }
 }
 
-@mixin glass-soft($radius: $size-22, $padding: $size-24, $margin-bottom: $size-24) {
+@mixin glass-soft($radius: $size-22, $padding: $size-24, $margin-bottom: $size-24, $hover: true) {
   border-radius: $radius;
   padding: $padding;
   margin-bottom: $margin-bottom;
@@ -20,9 +45,15 @@
   backdrop-filter: blur(15px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  @include glass-hover-lift($hover) {
+    border-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 22px 50px -26px rgba(40, 46, 80, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
 }
 
-@mixin glass-dark($radius: $size-22, $padding: $size-24, $margin-bottom: $size-24) {
+@mixin glass-dark($radius: $size-22, $padding: $size-24, $margin-bottom: $size-24, $hover: true) {
   border-radius: $radius;
   padding: $padding;
   margin-bottom: $margin-bottom;
@@ -32,6 +63,15 @@
   box-shadow: 0 26px 64px -30px rgba(12, 16, 40, 0.7),
   inset 0 1px 0 rgba(255, 255, 255, 0.16);
   color: #eef0f8;
+
+  @include glass-hover-lift($hover) {
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 34px 74px -26px rgba(12, 16, 40, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  }
+  &:hover {
+    color: $color-text;
+  }
 }
 
 .glass-panel {

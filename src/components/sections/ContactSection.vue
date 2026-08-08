@@ -20,16 +20,18 @@ const links = [
     </div>
     <div class="side">
       <div class="btn-primary"><DownloadCV /></div>
-      <a
-        v-for="link in links"
-        :key="link.label"
-        :href="link.href"
-        target="_blank"
-        rel="noopener"
-        class="link"
-      >
-        {{ link.label }}<ArrowUpRight />
-      </a>
+      <div CLASS="socials">
+        <a
+          v-for="link in links"
+          :key="link.label"
+          :href="link.href"
+          target="_blank"
+          rel="noopener"
+          class="link"
+        >
+          {{ link.label }}<ArrowUpRight />
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -39,6 +41,7 @@ const links = [
 @use "@/assets/style/variables" as *;
 @use "@/assets/style/typography" as *;
 @use "@/assets/style/button" as *;
+@use "@/assets/style/breakpoint" as *;
 
 section {
   display: flex;
@@ -117,6 +120,28 @@ section {
       color: $color-text-soft;
       text-align: center;
       margin-top: $size-4;
+    }
+  }
+}
+
+@media (min-width: $md) {
+  section {
+    flex-direction: row;
+    gap: $size-16;
+
+    .main {
+      width: 100%;
+    }
+
+    .side {
+      width: 70%;
+      justify-content: space-around;
+    }
+
+    .socials {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
     }
   }
 }
