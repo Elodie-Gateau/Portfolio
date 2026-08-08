@@ -1,40 +1,39 @@
 # 🌐 Portfolio Vue.js - Elodie Gateau
 
-> 📌 **Projet pédagogique** réalisé dans le cadre de la préparation au **Titre Professionnel Développeur Web et Web Mobile (TP DWWM)**.
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-Ce projet est un **portfolio dynamique développé en Vue.js**, permettant de présenter :  
-- mon parcours professionnel,  
-- mes formations,  
-- mes projets (sites web, applications, dépôts GitHub),  
-- mes compétences techniques (badges interactifs),  
-- des informations de contact  
+Portfolio personnel développé en **Vue 3**, présentant :
+- mon parcours professionnel,
+- mes formations,
+- mes projets (sites web, applications, dépôts GitHub),
+- mes compétences techniques,
+- mes informations de contact.
 
 ---
 
 ## 🚀 Fonctionnalités principales
 
-- **Navigation dynamique** avec affichage conditionnel des composants Vue (Home, À propos, Projets, Compétences, Contact).  
-- **Compétences et Présentation des projets** affichées sous forme de badges :  
-  - Filtrage par catégories (Développement, Outils, Design, CRM, No-Code),  
-  - Barre de progression par compétence,  
-  - Source d’apprentissage et exemples d’utilisation,
-  - Import des projets depuis un fichier JSON,
-  - Détails projet avec image, description, lien vers le site et GitHub.  
-- **À propos** : affichage des expériences professionnelles et formations via des fichiers JSON.  
-- **Contact** :  
-  - Affichage des coordonnées,  
-  - Liens vers GitHub et LinkedIn.  
+- **Header et navigation sticky** avec effet glassmorphism, menu plein écran sur mobile et barre horizontale sur desktop (fermeture automatique au changement de breakpoint).
+- **Section héro** en grille responsive (12 colonnes dès `md`), avec photo et résumé en position *sticky* pendant le défilement.
+- **Compétences** classées par catégorie, chargées depuis un fichier JSON.
+- **Projets** : grille sur mobile, carrousel défilant sur desktop/large écran, pagination "voir plus" sur mobile.
+- **Parcours professionnel** : timeline générée depuis un JSON, avec pagination "voir plus".
+- **Formations** : liste des formations suivies.
+- **Contact** : coordonnées, liens GitHub/LinkedIn, téléchargement du CV.
+- **Scroll fluide** vers les ancres de la nav, avec prise en compte de la hauteur du header sticky.
+- **Design system SCSS maison** : effet "verre" (glassmorphism) réutilisable, boutons, typographie et grille de breakpoints centralisés dans des mixins.
 
 ---
 
 ## 🛠️ Stack technique
 
-- [Vue.js 3](https://vuejs.org/) (composition API, components, props, ref, reactive, computed)  
-- [Vite](https://vitejs.dev/) (outil de build rapide)  
-- [FontAwesome](https://fontawesome.com/) pour les icônes  
-- [Vue-Multiselect](https://vue-multiselect.js.org/) pour le filtrage des projets  
-- JSON pour la gestion des données statiques (projets, compétences, formations, expériences)  
-- [GitHub API](https://docs.github.com/en/rest) pour la récupération des dépôts publics  
+- [Vue 3](https://vuejs.org/) — Composition API, `<script setup>`, composables réutilisables
+- [Vite](https://vitejs.dev/) — build et serveur de développement
+- [Sass/SCSS](https://sass-lang.com/) — design system
+- [Lucide](https://lucide.dev/) (`@lucide/vue`) — icônes
+- JSON pour la gestion des données statiques (projets, compétences, formations, expériences)
+- [gh-pages](https://www.npmjs.com/package/gh-pages) — déploiement sur GitHub Pages
 
 ---
 
@@ -42,48 +41,40 @@ Ce projet est un **portfolio dynamique développé en Vue.js**, permettant de pr
 
 ```
 src/
+├── assets/
+│   ├── data/              # projects.json, skills.json, formations.json, experiences.json
+│   ├── font/               # Plus Jakarta Sans (auto-hébergée)
+│   ├── style/               # design system SCSS (variables, typographie, boutons, glass panel, breakpoints)
+│   └── main.scss
 │
-├── assets/               # Données JSON + images du portfolio
-│   ├── skills.json
-│   ├── experiences.json
-│   ├── formations.json
+├── components/
+│   ├── layout/              # AppHeader, AppFooter
+│   ├── sections/             # HeroSection, SkillsSection, ProjectsSection, BackgroundSection, TrainingSection, ContactSection
+│   └── ui/                   # Nav, CV, SeeMore
 │
-├── components/           # Composants Vue
-│   ├── Navigation.vue
-│   ├── Home.vue
-│   ├── AboutSection.vue
-│   ├── SkillBadge.vue
-│   ├── ContactForm.vue
-│
-├── App.vue               # Composant principal
-└── main.js               # Point d’entrée
+├── composables/             # useSmoothScroll, useMediaQuery, usePagination
+├── App.vue                  # Composant racine
+└── main.js                  # Point d'entrée
 ```
 
 ---
 
-## 📚 Compétences travaillées (référentiel TP DWWM)
+## 💻 Commandes
 
-- Développement d’une **application web dynamique** avec Vue.js  
-- Consommation d’une **API externe** (GitHub)  
-- Gestion et manipulation de **données JSON**  
-- Création et utilisation de **composants Vue.js réutilisables**  
-- Mise en place de **filtres et interactions utilisateur**  
-- Validation de formulaires et **bonnes pratiques en accessibilité**  
-- Organisation et **structuration d’un projet front-end moderne**  
+```bash
+npm install       # installe les dépendances
+npm run dev        # lance le serveur de développement
+npm run build       # build de production dans dist/
+npm run preview      # prévisualise le build de production
+npm run deploy       # build + publie dist/ sur GitHub Pages
+```
 
 ---
-
 
 ## 👩‍💻 Auteur
 
-**Elodie Gateau**  
-- 📧 elodie.gateau.raffeneau@gmail.com  
+**Elodie Gateau**
+- 📧 elodie.gateau.raffeneau@gmail.com
 - 🌐 [Portfolio en ligne](https://elodie-gateau.github.io/Portfolio/)
-- 💼 [LinkedIn](https://www.linkedin.com/in/elodiegateau/)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/elodiegateau/)
 - 🐙 [GitHub](https://github.com/Elodie-Gateau)
-
----
-
-## 📜 Licence
-
-Projet à visée pédagogique — utilisation dans le cadre de la formation **Titre Professionnel DWWM**.
