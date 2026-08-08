@@ -16,6 +16,7 @@ onMounted(() => {
   updateHeaderHeight();
   resizeObserver = new ResizeObserver(updateHeaderHeight);
   resizeObserver.observe(headerEl.value);
+  document.fonts?.ready.then(updateHeaderHeight);
 });
 
 onBeforeUnmount(() => {

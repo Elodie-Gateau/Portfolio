@@ -1,26 +1,15 @@
 <script setup>
 import data from '@/assets/data/projects.json' with { type: 'json'};
 import { Code, ChevronLeft, ChevronRight } from '@lucide/vue';
-import {computed, onBeforeUnmount, onMounted, ref} from "vue";
+import {computed, ref} from "vue";
+import SeeMore from "@/components/ui/SeeMore.vue";
+import { useMediaQuery, MD_QUERY } from "@/composables/useMediaQuery";
+import { usePagination } from "@/composables/usePagination";
 
-const nbProjects = ref(3);
-const isCarousel = ref(false);
+const isCarousel = useMediaQuery(MD_QUERY);
 const track = ref(null);
-let mediaQuery;
 
-function handleMediaChange(e) {
-  isCarousel.value = e.matches;
-}
-
-onMounted(() => {
-  mediaQuery = window.matchMedia('(min-width: 768px)');
-  handleMediaChange(mediaQuery);
-  mediaQuery.addEventListener('change', handleMediaChange);
-});
-
-onBeforeUnmount(() => {
-  mediaQuery?.removeEventListener('change', handleMediaChange);
-});
+const { count: nbProjects, hasMore: paginationHasMore, seeMore } = usePagination(data.length);
 
 const projects = computed(() =>
   isCarousel.value
@@ -28,11 +17,7 @@ const projects = computed(() =>
     : data.filter((project) => project.position <= nbProjects.value)
 );
 
-const hasMore = computed(() => !isCarousel.value && nbProjects.value < data.length);
-
-function seeMore() {
-  nbProjects.value += 3;
-}
+const hasMore = computed(() => !isCarousel.value && paginationHasMore.value);
 
 function scrollByCard(direction) {
   if (!track.value) return;
@@ -73,7 +58,7 @@ function scrollByCard(direction) {
       </button>
     </div>
 
-    <button v-if="hasMore" @click="seeMore()">Voir plus</button>
+    <SeeMore :has-more="hasMore" @see-more="seeMore" />
   </section>
 </template>
 
@@ -160,13 +145,6 @@ section {
       display: flex;
       gap: $size-6
     }
-  }
-
-  button {
-    @include button-secondary();
-    @include glass-soft($size-12, $size-8 $size-12, $size-32);
-    align-self: center;
-    cursor: pointer;
   }
 
   @media (min-width: $md) {

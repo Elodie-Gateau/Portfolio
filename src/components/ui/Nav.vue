@@ -1,12 +1,17 @@
 <script setup>
 import { Menu, CircleX } from '@lucide/vue';
-import { ref } from "vue";
-import DownloadCV from "@/components/ui/DownloadCV.vue";
+import { ref, watch } from "vue";
 import { useSmoothScroll } from "@/composables/useSmoothScroll";
+import { useMediaQuery, MD_QUERY } from "@/composables/useMediaQuery";
 import CV from "@/components/ui/CV.vue";
 
 const isOpen = ref(false);
 const toggle = () => isOpen.value = !isOpen.value;
+const isDesktop = useMediaQuery(MD_QUERY);
+
+watch(isDesktop, (desktop) => {
+  if (desktop) isOpen.value = false;
+});
 
 const { onAnchorClick } = useSmoothScroll({
   offset: () => document.querySelector('header')?.getBoundingClientRect().bottom ?? 0,
@@ -33,7 +38,7 @@ function onNavLinkClick(event) {
           <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
           <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
           <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
-          <li class="btn-primary"><DownloadCV /></li>
+          <li class="btn-primary" @click="isOpen = false"><CV text="Télécharger le CV" /></li>
         </ul>
       </nav>
     </Transition>
@@ -46,7 +51,7 @@ function onNavLinkClick(event) {
       <li><a href="#projects" @click="onNavLinkClick">Projets</a></li>
       <li><a href="#background" @click="onNavLinkClick">Parcours</a></li>
       <li><a href="#contact" @click="onNavLinkClick">Contact</a></li>
-      <li class="btn-primary"><CV /></li>
+      <li class="btn-primary"><CV  text="CV"/></li>
     </ul>
   </nav>
 </template>

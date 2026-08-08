@@ -30,7 +30,7 @@
     "position": 4,
     "name": "Portfolio",
     "subtitle": "Site personnel",
-    "image": "images/portfolio.jpeg",
+    "image": "images/portfolio.webp",
     "link": "https://github.com/Elodie-Gateau/Portfolio",
     "description": "Portfolio dynamique réalisé en Vue.js, publié via GitHub Pages.",
     "tags": ["Vue.js", "GitHub"]

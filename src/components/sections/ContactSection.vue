@@ -1,6 +1,6 @@
 <script setup>
 import { ArrowUpRight } from '@lucide/vue';
-import DownloadCV from "@/components/ui/DownloadCV.vue";
+import CV from "@/components/ui/CV.vue";
 
 const links = [
   { label: 'GitHub', href: 'https://github.com/Elodie-Gateau' },
@@ -19,8 +19,8 @@ const links = [
       </div>
     </div>
     <div class="side">
-      <div class="btn-primary"><DownloadCV /></div>
-      <div CLASS="socials">
+      <div class="btn-primary"><CV text="Télécharger le CV"/></div>
+      <div class="socials">
         <a
           v-for="link in links"
           :key="link.label"

@@ -1,18 +1,14 @@
 <script setup>
 import experiences from '@/assets/data/experiences.json' with { type: 'json'};
-import {computed, ref} from "vue";
+import {computed} from "vue";
+import SeeMore from "@/components/ui/SeeMore.vue";
+import { usePagination } from "@/composables/usePagination";
 
-const nbExperience = ref(3);
+const { count: nbExperience, hasMore, seeMore } = usePagination(experiences.length);
 
 const displayedExperiences = computed(() =>
   experiences.slice(0, nbExperience.value)
 );
-
-const hasMore = computed(() => nbExperience.value < experiences.length);
-
-function seeMore() {
-  nbExperience.value += 3;
-}
 </script>
 
 <template>
@@ -29,7 +25,7 @@ function seeMore() {
       </ul>
     </div>
   </div>
-  <button v-if="hasMore" @click="seeMore()">Voir plus</button>
+  <SeeMore class="see-more" :has-more="hasMore" @see-more="seeMore" />
 </section>
 </template>
 
@@ -37,7 +33,6 @@ function seeMore() {
 @use "@/assets/style/glassPanel" as *;
 @use "@/assets/style/variables" as *;
 @use "@/assets/style/typography" as *;
-@use "@/assets/style/button" as *;
 
 section {
   @include glass-default($radius-xl, $size-24);
@@ -123,12 +118,8 @@ section {
     }
   }
 
-  button {
-    @include button-secondary();
-    @include glass-soft($size-12, $size-8 $size-12, $size-32);
-    align-self: center;
+  .see-more {
     margin-top: $size-24;
-    cursor: pointer;
   }
 }
 </style>

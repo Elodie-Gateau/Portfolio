@@ -1,5 +1,12 @@
 <script setup>
 import {ArrowDownToLine} from "@lucide/vue";
+defineProps({
+  text: {
+    type: String,
+    required: true,
+  }
+})
+
 function downloadCV() {
   const link = document.createElement("a");
   link.href = `${import.meta.env.BASE_URL}upload/CV_ElodieGateau.pdf`;
@@ -9,7 +16,7 @@ function downloadCV() {
 </script>
 
 <template>
-  <button @click="downloadCV()">CV<ArrowDownToLine /></button>
+  <button @click="downloadCV()">{{ text }}<ArrowDownToLine /></button>
 </template>
 
 <style scoped lang="scss">

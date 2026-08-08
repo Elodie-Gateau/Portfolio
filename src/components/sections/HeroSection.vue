@@ -1,7 +1,9 @@
 <script setup>
-import DownloadCV from "@/components/ui/DownloadCV.vue";
 import { useSmoothScroll } from "@/composables/useSmoothScroll";
 import {ArrowRight} from "@lucide/vue";
+import CV from "@/components/ui/CV.vue";
+
+const profileImg = `${import.meta.env.BASE_URL}images/photo-profil.webp`;
 
 const { onAnchorClick } = useSmoothScroll({
   offset: () => document.querySelector('header')?.getBoundingClientRect().bottom ?? 0,
@@ -9,7 +11,7 @@ const { onAnchorClick } = useSmoothScroll({
 </script>
 
 <template>
-  <section class="about">
+  <section id="about">
     <div class="container-hero">
       <div class="flash">
         <span></span>
@@ -19,7 +21,7 @@ const { onAnchorClick } = useSmoothScroll({
       <p>Développeuse fullstack, j'aime construire des solutions qui rendent <strong>service</strong> aux professionnels et améliorent leur quotidien.</p>
       <div class="buttons">
         <a href="#projects" @click="onAnchorClick">Voir mes projets</a>
-        <DownloadCV />
+        <CV text="Télécharger le CV" />
       </div>
     </div>
     <div class="container">
@@ -30,7 +32,7 @@ const { onAnchorClick } = useSmoothScroll({
     </div>
     <div class="sidebar">
       <div class="img-container">
-        <img src="/public/images/photo-profil.webp" alt="Portrait Elodie Gateau">
+        <img :src="profileImg" alt="Portrait Elodie Gateau">
       </div>
       <div class="resume">
         <div>
@@ -193,7 +195,7 @@ h3 {
 }
 
 @media (min-width: $md) {
-  .about {
+  #about {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto;
